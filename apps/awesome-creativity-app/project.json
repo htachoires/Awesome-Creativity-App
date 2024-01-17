@@ -1,0 +1,58 @@
+{
+  "name": "awesome-creativity-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/awesome-creativity-app",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/awesome-creativity-app"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/awesome-creativity-app"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "awesome-creativity-app:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "awesome-creativity-app:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "awesome-creativity-app:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "awesome-creativity-app:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/awesome-creativity-app/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": []
+}
