@@ -1,2 +1,14 @@
 .page {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 1080px;
+  max-width: 1080px;
+  min-width: 1080px;
+}
+
+.container {
+  text-align: center;
 }
