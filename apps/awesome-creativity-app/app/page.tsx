@@ -9,7 +9,7 @@ export default async function Index() {
     <div className={styles.page}>
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          <h1>Calendrier de l'avant 2025 <br/> pour, mon Chat ❄️❤️</h1>
+          <h1>Calendrier de l'Avant 2024 <br/> pour, mon Chat ❄️❤️</h1>
           <div className={styles['grid-container']}>
             <div className={styles['grid']}>
               <Card day={1} x={1} y={1} placeSelf={"start"}/>
