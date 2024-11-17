@@ -1,4 +1,7 @@
+'use client';
+
 import styles from './image-card.module.scss';
+import GridItem from '../../components/grid-item/grid-item';
 
 /* eslint-disable-next-line */
 export interface ImageCardProps {
@@ -21,18 +24,24 @@ export function ImageCard({
   width,
 }: ImageCardProps) {
   return (
-    <div
-      className={styles['container']}
-      style={{
-        gridColumnStart: x,
-        gridRowStart: y,
-        marginTop: marginTop,
-        placeSelf: placeSelf,
-        rotate: rotate,
-      }}
+    <GridItem
+        x={x}
+        y={y}
+        marginTop={marginTop}
+        placeSelf={placeSelf}
     >
-      <img className={styles['img-card']} src={uri} alt="photo" width={width} />
-    </div>
+      <div
+        style={{rotate:rotate}}
+        className={styles['container']}
+      >
+        <img
+          className={styles['img-card']}
+          src={uri}
+          alt="photo"
+          width={width}
+        />
+      </div>
+    </GridItem>
   );
 }
 
