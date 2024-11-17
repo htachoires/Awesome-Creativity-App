@@ -12,9 +12,11 @@ export default function Grid() {
   const [isVisible, setIsVisible] = useState('none');
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible('grid'), 0);
+    const timer = setTimeout(() => setIsVisible('grid'), 3700);
     return () => clearTimeout(timer); // Nettoyage du timer
   }, []);
+
+  let currentY = 1;
 
   return (
     <div>
@@ -26,7 +28,7 @@ export default function Grid() {
           <SmallDayCard x={1} y={1} day={1} placeSelf={'start'} />
           <ImageCard
             x={7}
-            y={1}
+            y={currentY}
             marginY={0}
             delay={0.1}
             rotate={'6deg'}
@@ -36,7 +38,7 @@ export default function Grid() {
           />
           <ImageCard
             x={4}
-            y={2}
+            y={++currentY}
             marginY={-250}
             marginX={-25}
             delay={0.2}
@@ -49,14 +51,14 @@ export default function Grid() {
             day={2}
             delay={0.3}
             x={7}
-            y={2}
+            y={currentY}
             marginY={40}
             placeSelf={'end'}
             alignSelf={'start'}
           />
           <ImageCard
             x={1}
-            y={2}
+            y={currentY}
             delay={0.4}
             marginY={80}
             marginX={20}
@@ -65,21 +67,11 @@ export default function Grid() {
             width={150}
             uri={'/img/6-pic.jpg'}
           />
-          <SmallDayCard day={3} x={2} y={3} marginX={15} marginY={50} placeSelf={"center"}/>
-          <ImageCard
-            x={5}
-            y={3}
-            rotate={'-3deg'}
-            placeSelf={'start'}
-            marginY={90}
-            width={150}
-            uri={'/img/2-pic.jpg'}
-          />
           <ImageCard
             x={6}
-            y={3}
+            y={++currentY}
             marginY={-120}
-            delay={0.7}
+            delay={0.5}
             rotate={'-3deg'}
             placeSelf={'start'}
             width={100}
@@ -87,30 +79,39 @@ export default function Grid() {
           />
           <ImageCard
             x={6}
-            y={3}
+            y={currentY}
             marginY={0}
             marginX={-50}
-            delay={0.8}
+            delay={0.6}
             rotate={'10deg'}
             placeSelf={'start'}
             width={50}
             uri={'/img/bauble-3.png'}
           />
+          <SmallDayCard
+            day={3}
+            delay={0.7}
+            x={2}
+            y={currentY}
+            marginX={15}
+            marginY={50}
+            alignSelf={'start'}
+            placeSelf={'center'}
+          />
           <ImageCard
             x={5}
-            y={4}
-            marginY={-270}
-            marginX={30}
-            delay={0.9}
-            rotate={'1200deg'}
+            y={currentY}
+            delay={0.8}
+            rotate={'-3deg'}
             placeSelf={'start'}
-            width={100}
-            uri={'/img/lights.png'}
+            marginY={90}
+            width={150}
+            uri={'/img/2-pic.jpg'}
           />
           <ImageCard
             x={2}
-            y={4}
-            marginY={-160}
+            y={++currentY}
+            marginY={0}
             marginX={-30}
             delay={1}
             rotate={'70deg'}
@@ -118,10 +119,21 @@ export default function Grid() {
             width={100}
             uri={'/img/lights.png'}
           />
-          <SmallDayCard day={4} x={6} y={3} marginY={350} placeSelf={'end'} />
+          <ImageCard
+            x={5}
+            y={currentY}
+            marginY={0}
+            marginX={30}
+            delay={0.9}
+            rotate={'120deg'}
+            placeSelf={'start'}
+            width={100}
+            uri={'/img/lights.png'}
+          />
+          <SmallDayCard day={4} x={6} y={++currentY} marginY={0} placeSelf={'end'} />
           <ImageCard
             x={2}
-            y={4}
+            y={currentY}
             marginY={20}
             marginX={-30}
             rotate={'10deg'}
@@ -131,7 +143,7 @@ export default function Grid() {
           />
           <ImageCard
             x={6}
-            y={4}
+            y={currentY}
             marginY={60}
             rotate={'-6deg'}
             placeSelf={'start'}
@@ -140,7 +152,7 @@ export default function Grid() {
           />
           <ImageCard
             x={5}
-            y={4}
+            y={currentY}
             marginY={130}
             marginX={-15}
             rotate={'20deg'}
@@ -148,36 +160,42 @@ export default function Grid() {
             width={50}
             uri={'/img/bauble-1.png'}
           />
-          <BigCard day={5} x={3} y={5} marginY={50} placeSelf={'start'} />
-          <SmallDayCard day={6} x={1} y={6} marginY={130} />
-          <SmallDayCard day={7} x={7} y={7} marginY={40} placeSelf={'end'} />
+          <BigCard day={5} x={3} y={++currentY} marginY={50} placeSelf={'start'} />
+          <SmallDayCard day={6} x={1} y={++currentY} marginY={130} />
+          <SmallDayCard day={7} x={7} y={++currentY} marginY={40} placeSelf={'end'} />
           <ImageCard
             x={1}
-            y={8}
+            y={++currentY}
             marginY={0}
             rotate={'-6deg'}
             placeSelf={'start'}
             width={180}
             uri={'/img/3-pic.jpg'}
           />
-          <SmallDayCard day={8} x={3} y={8} marginY={160} />
-          <SmallDayCard day={9} x={6} y={9} marginY={150} placeSelf={'center'} />
-          <BigCard day={10} x={4} y={10} marginY={150} placeSelf={'center'} />
-          <SmallDayCard day={11} x={1} y={11} marginY={100} />
-          <SmallDayCard day={12} x={5} y={12} marginY={200} />
-          <SmallDayCard day={13} x={2} y={13} marginY={150} />
-          <SmallDayCard day={14} x={4} y={14} marginY={250} placeSelf={'end'} />
-          <BigCard day={15} x={4} y={15} marginY={150} placeSelf={'center'} />
-          <SmallDayCard day={16} x={5} y={16} marginY={200} />
-          <SmallDayCard day={17} x={1} y={17} marginY={150} />
-          <SmallDayCard day={18} x={5} y={18} marginY={150} />
-          <SmallDayCard day={19} x={3} y={19} marginY={150} placeSelf={'end'} />
-          <BigCard day={20} x={4} y={20} marginY={150} placeSelf={'center'} />
-          <SmallDayCard day={21} x={1} y={21} marginY={150} />
-          <SmallDayCard day={22} x={7} y={22} marginY={150} placeSelf={'end'} />
-          <SmallDayCard day={23} x={3} y={23} marginY={150} />
-          <SmallDayCard day={24} x={4} y={24} marginY={150} />
-          <SantaCard day={25} x={4} y={25} marginY={400} placeSelf={'center'} />
+          <SmallDayCard day={8} x={3} y={++currentY} marginY={160} />
+          <SmallDayCard
+            day={9}
+            x={6}
+            y={++currentY}
+            marginY={150}
+            placeSelf={'center'}
+          />
+          <BigCard day={10} x={4} y={++currentY} marginY={150} placeSelf={'center'} />
+          <SmallDayCard day={11} x={1} y={++currentY} marginY={100} />
+          <SmallDayCard day={12} x={5} y={++currentY} marginY={200} />
+          <SmallDayCard day={13} x={2} y={++currentY} marginY={150} />
+          <SmallDayCard day={14} x={4} y={++currentY} marginY={250} placeSelf={'end'} />
+          <BigCard day={15} x={4} y={++currentY} marginY={150} placeSelf={'center'} />
+          <SmallDayCard day={16} x={5} y={++currentY} marginY={200} />
+          <SmallDayCard day={17} x={1} y={++currentY} marginY={150} />
+          <SmallDayCard day={18} x={5} y={++currentY} marginY={150} />
+          <SmallDayCard day={19} x={3} y={++currentY} marginY={150} placeSelf={'end'} />
+          <BigCard day={20} x={4} y={++currentY} marginY={150} placeSelf={'center'} />
+          <SmallDayCard day={21} x={1} y={++currentY} marginY={150} />
+          <SmallDayCard day={22} x={7} y={++currentY} marginY={150} placeSelf={'end'} />
+          <SmallDayCard day={23} x={3} y={++currentY} marginY={150} />
+          <SmallDayCard day={24} x={4} y={++currentY} marginY={150} />
+          <SantaCard day={25} x={4} y={++currentY} marginY={400} placeSelf={'center'} />
         </div>
       </motion.div>
     </div>
