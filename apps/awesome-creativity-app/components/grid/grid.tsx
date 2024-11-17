@@ -90,7 +90,6 @@ export default function Grid() {
           />
           <SmallDayCard
             day={3}
-            delay={0.7}
             x={2}
             y={currentY}
             marginX={15}
@@ -101,7 +100,6 @@ export default function Grid() {
           <ImageCard
             x={5}
             y={currentY}
-            delay={0.8}
             rotate={'-3deg'}
             placeSelf={'start'}
             marginY={90}
@@ -113,7 +111,6 @@ export default function Grid() {
             y={++currentY}
             marginY={0}
             marginX={-30}
-            delay={1}
             rotate={'70deg'}
             placeSelf={'start'}
             width={100}
@@ -124,7 +121,6 @@ export default function Grid() {
             y={currentY}
             marginY={0}
             marginX={30}
-            delay={0.9}
             rotate={'120deg'}
             placeSelf={'start'}
             width={100}
