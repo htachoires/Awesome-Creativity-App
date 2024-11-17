@@ -6,9 +6,17 @@ export interface SantaCardProps {
   y: number;
   marginY?: number;
   placeSelf?: string;
+  marginX?: number;
 }
 
-export function SantaCard({ day, x, y, marginY, placeSelf }: SantaCardProps) {
+export function SantaCard({
+  day,
+  x,
+  y,
+  marginY,
+  placeSelf,
+  marginX,
+}: SantaCardProps) {
   return (
     <DayCard
       day={day}
@@ -18,9 +26,11 @@ export function SantaCard({ day, x, y, marginY, placeSelf }: SantaCardProps) {
       placeSelf={placeSelf}
       height={200}
       width={200}
+      marginX={marginX}
       color={'#F4D03F'}
-      borderBackground={"#145A32"}
-      borderRadius={"27% 73% 29% 71% / 72% 26% 74% 28% "}
+      borderBackground={'#145A32'}
+      borderRadius={'27% 73% 29% 71% / 72% 26% 74% 28% '}
+      fontSize={'5rem'}
     />
   );
 }

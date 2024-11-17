@@ -222,7 +222,33 @@ export default function Grid() {
           <SmallDayCard day={22} x={7} y={++currentY} marginY={150} placeSelf={'end'} />
           <SmallDayCard day={23} x={3} y={++currentY} marginY={150} />
           <SmallDayCard day={24} x={4} y={++currentY} marginY={150} />
-          <SantaCard day={25} x={4} y={++currentY} marginY={400} placeSelf={'center'} />
+          <SantaCard day={25} x={3} y={++currentY} marginX={-15} marginY={90} placeSelf={'center'} />
+          <ImageCard
+            x={2}
+            y={currentY}
+            marginY={108}
+            rotate={'4deg'}
+            width={65}
+            uri={'/img/secret-santa.png'}
+          />
+          <ImageCard
+            x={2}
+            y={++currentY}
+            placeSelf={"center"}
+            rotate={'0deg'}
+            alignSelf={"end"}
+            width={80}
+            uri={'/img/gift-bag.png'}
+          />
+          <ImageCard
+            x={7}
+            y={currentY}
+            marginY={-50}
+            rotate={'0deg'}
+            placeSelf={'end'}
+            width={180}
+            uri={'/img/christmas-tree.png'}
+          />
         </div>
       </motion.div>
     </div>

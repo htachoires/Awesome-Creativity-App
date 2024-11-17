@@ -30,6 +30,7 @@ export function BigCard({
       color={'#F4D03F'}
       rotate={'-2deg'}
       borderBackground={'#145A32'}
+      fontSize={"4rem"}
       borderRadius={'16% 84% 16% 84% / 81% 12% 88% 19%'}
     />
   );

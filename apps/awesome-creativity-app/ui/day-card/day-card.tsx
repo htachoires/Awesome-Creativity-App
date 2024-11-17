@@ -19,6 +19,7 @@ export interface DayCardProps {
   delay?: number | undefined;
   alignSelf?: string | undefined;
   marginX?: number | undefined;
+  fontSize?: string;
 }
 
 export function DayCard({
@@ -36,6 +37,7 @@ export function DayCard({
   delay,
   alignSelf,
   marginX,
+  fontSize,
 }: DayCardProps) {
   return (
     <GridItem
@@ -66,7 +68,7 @@ export function DayCard({
             borderRadius: borderRadius,
           }}
         >
-          <span className={styles.dayCardText}>{day}</span>
+          <span style={{fontSize: fontSize}} className={styles.dayCardText}>{day}</span>
         </div>
       </motion.div>
     </GridItem>
