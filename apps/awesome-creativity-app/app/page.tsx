@@ -2,6 +2,7 @@ import styles from './page.module.scss';
 import Card from '../ui/card/card';
 import BigCard from '../ui/big-card/big-card';
 import SantaCard from '../ui/santa-card/santa-card';
+import ImageCard from '../ui/image-card/image-card';
 
 export default async function Index() {
   return (
@@ -11,13 +12,16 @@ export default async function Index() {
           <h1>Welcome to awesome creativity app!</h1>
           <div className={styles['grid-container']}>
             <div className={styles['grid']}>
-              <Card day={1} x={3} y={1} placeSelf={"end"}/>
+              <Card day={1} x={1} y={1} placeSelf={"start"}/>
+              <ImageCard x={7} y={1} marginTop={0} rotate={"6deg"} placeSelf={"end"} width={160} uri={"/img/1-pic.jpg"} />
               <Card day={2} x={7} y={2} marginTop={90} placeSelf={"end"} />
+              <ImageCard x={1} y={2} marginTop={80} rotate={"-6deg"} placeSelf={"start"} width={150} uri={"/img/2-pic.jpg"} />
               <Card day={3} x={2} y={3} marginTop={100} />
               <Card day={4} x={6} y={4} marginTop={130} placeSelf={"end"}/>
               <BigCard day={5} x={4} y={5} marginTop={150} placeSelf={"center"} />
               <Card day={6} x={1} y={6} marginTop={130} />
               <Card day={7} x={7} y={7} marginTop={40} placeSelf={"end"}/>
+              <ImageCard x={1} y={8} marginTop={0} rotate={"-6deg"} placeSelf={"start"} width={180} uri={"/img/3-pic.jpg"} />
               <Card day={8} x={3} y={8} marginTop={160} />
               <Card day={9} x={6} y={9} marginTop={150} placeSelf={"center"}/>
               <BigCard day={10} x={4} y={10} marginTop={150} placeSelf={"center"} />
