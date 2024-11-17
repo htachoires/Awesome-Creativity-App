@@ -4,13 +4,14 @@ export interface BigCardProps {
   day: number;
   x: number;
   y: number;
+  marginX?: number;
   marginY?: number;
   placeSelf?: string;
   delay?: number;
   alignSelf?: string;
 }
 
-export function SmallCard({
+export function SmallDayCard({
   day,
   x,
   y,
@@ -18,12 +19,14 @@ export function SmallCard({
   placeSelf,
   delay,
   alignSelf,
+  marginX,
 }: BigCardProps) {
   return (
     <DayCard
       day={day}
       x={x}
       y={y}
+      marginX={marginX}
       marginY={marginY}
       placeSelf={placeSelf}
       alignSelf={alignSelf}
@@ -38,4 +41,4 @@ export function SmallCard({
   );
 }
 
-export default SmallCard;
+export default SmallDayCard;

@@ -3,7 +3,7 @@ import { motion, Variants } from 'framer-motion';
 export interface GridItemProps {
   x: number;
   y: number;
-  marginX?: string;
+  marginX?: number;
   marginY?: number;
   placeSelf?: string;
   children?: any;

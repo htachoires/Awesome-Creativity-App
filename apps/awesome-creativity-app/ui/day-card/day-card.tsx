@@ -18,6 +18,7 @@ export interface DayCardProps {
   rotate?: string;
   delay?: number | undefined;
   alignSelf?: string | undefined;
+  marginX?: number | undefined;
 }
 
 export function DayCard({
@@ -34,9 +35,18 @@ export function DayCard({
   rotate,
   delay,
   alignSelf,
+  marginX,
 }: DayCardProps) {
   return (
-    <GridItem x={x} delay={delay} y={y} marginY={marginY} placeSelf={placeSelf} alignSelf={alignSelf}>
+    <GridItem
+      x={x}
+      delay={delay}
+      y={y}
+      marginX={marginX}
+      marginY={marginY}
+      placeSelf={placeSelf}
+      alignSelf={alignSelf}
+    >
       <motion.div
         whileHover={{ scale: 1.05, rotate: rotate }}
         whileTap={{ scale: 0.95, rotate: rotate }}
