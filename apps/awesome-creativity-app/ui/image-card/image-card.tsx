@@ -8,7 +8,8 @@ export interface ImageCardProps {
   uri: string;
   x: number;
   y: number;
-  marginTop?: number;
+  marginY?: number;
+  marginX?: number;
   placeSelf?: string;
   rotate?: string;
   width: number;
@@ -19,16 +20,24 @@ export function ImageCard({
   uri,
   x,
   y,
-  marginTop,
+  marginY,
   placeSelf,
   rotate,
   width,
   delay,
+  marginX,
 }: ImageCardProps) {
   return (
-    <GridItem x={x} delay={delay} y={y} marginTop={marginTop} placeSelf={placeSelf}>
+    <GridItem
+      x={x}
+      delay={delay}
+      y={y}
+      marginY={marginY}
+      placeSelf={placeSelf}
+    >
       <div style={{ rotate: rotate }} className={styles['container']}>
         <img
+          style={{ marginLeft: marginX }}
           className={styles['img-card']}
           src={uri}
           alt="photo"

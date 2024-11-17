@@ -1,30 +1,32 @@
 import DayCard from '../day-card';
 
-/* eslint-disable-next-line */
 export interface BigCardProps {
   day: number;
   x: number;
   y: number;
-  marginTop?: number;
+  marginY?: number;
   placeSelf?: string;
   delay?: number;
+  alignSelf?: string;
 }
 
 export function SmallCard({
   day,
   x,
   y,
-  marginTop,
+  marginY,
   placeSelf,
   delay,
+  alignSelf,
 }: BigCardProps) {
   return (
     <DayCard
       day={day}
       x={x}
       y={y}
-      marginTop={marginTop}
+      marginY={marginY}
       placeSelf={placeSelf}
+      alignSelf={alignSelf}
       height={100}
       width={100}
       color={'#922B21'}

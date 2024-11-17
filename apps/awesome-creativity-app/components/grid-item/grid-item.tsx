@@ -3,21 +3,24 @@ import { motion, Variants } from 'framer-motion';
 export interface GridItemProps {
   x: number;
   y: number;
-  marginTop?: number;
+  marginX?: string;
+  marginY?: number;
   placeSelf?: string;
   children?: any;
   delay?: number;
+  alignSelf?: string | undefined;
 }
 
 export function GridItem({
   x,
   y,
-  marginTop,
+  marginY,
   placeSelf,
   children,
-  delay
+  delay,
+  marginX,
+  alignSelf,
 }: GridItemProps) {
-
   const cardVariants: Variants = {
     offscreen: {
       y: 300,
@@ -28,7 +31,7 @@ export function GridItem({
         type: 'spring',
         bounce: 0.4,
         duration: 0.8,
-        delay: delay ?? 0
+        delay: delay ?? 0,
       },
     },
   };
@@ -41,12 +44,13 @@ export function GridItem({
       style={{
         gridColumnStart: x,
         gridRowStart: y,
-        marginTop: marginTop,
+        marginTop: marginY,
+        marginLeft: marginX,
         placeSelf: placeSelf,
+        alignSelf: alignSelf
       }}
     >
-      <motion.div
-        variants={cardVariants}>{children}</motion.div>
+      <motion.div variants={cardVariants}>{children}</motion.div>
     </motion.div>
   );
 }

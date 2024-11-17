@@ -4,7 +4,7 @@ export interface BigCardProps {
   day: number;
   x: number;
   y: number;
-  marginTop?: number;
+  marginY?: number;
   placeSelf?: string;
   delay?: number;
 }
@@ -13,7 +13,7 @@ export function BigCard({
   day,
   x,
   y,
-  marginTop,
+  marginY,
   placeSelf,
   delay,
 }: BigCardProps) {
@@ -23,7 +23,7 @@ export function BigCard({
       x={x}
       y={y}
       delay={delay}
-      marginTop={marginTop}
+      marginY={marginY}
       placeSelf={placeSelf}
       height={100}
       width={150}

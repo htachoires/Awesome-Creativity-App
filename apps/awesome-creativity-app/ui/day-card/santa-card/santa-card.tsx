@@ -4,17 +4,17 @@ export interface SantaCardProps {
   day: number;
   x?: number;
   y?: number;
-  marginTop?: number;
+  marginY?: number;
   placeSelf?: string;
 }
 
-export function SantaCard({ day, x, y, marginTop, placeSelf }: SantaCardProps) {
+export function SantaCard({ day, x, y, marginY, placeSelf }: SantaCardProps) {
   return (
     <DayCard
       day={day}
       x={x}
       y={y}
-      marginTop={marginTop}
+      marginY={marginY}
       placeSelf={placeSelf}
       height={200}
       width={200}

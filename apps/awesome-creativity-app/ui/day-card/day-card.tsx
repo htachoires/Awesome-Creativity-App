@@ -8,7 +8,7 @@ export interface DayCardProps {
   day: number;
   x: number;
   y: number;
-  marginTop?: number;
+  marginY?: number;
   placeSelf?: string;
   height?: number;
   width?: number;
@@ -17,13 +17,14 @@ export interface DayCardProps {
   borderBackground?: string;
   rotate?: string;
   delay?: number | undefined;
+  alignSelf?: string | undefined;
 }
 
 export function DayCard({
   day,
   x,
   y,
-  marginTop,
+  marginY,
   placeSelf,
   height,
   width,
@@ -32,9 +33,10 @@ export function DayCard({
   borderBackground,
   rotate,
   delay,
+  alignSelf,
 }: DayCardProps) {
   return (
-    <GridItem x={x} delay={delay} y={y} marginTop={marginTop} placeSelf={placeSelf}>
+    <GridItem x={x} delay={delay} y={y} marginY={marginY} placeSelf={placeSelf} alignSelf={alignSelf}>
       <motion.div
         whileHover={{ scale: 1.05, rotate: rotate }}
         whileTap={{ scale: 0.95, rotate: rotate }}
