@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 
 export interface DayCardProps {
   day: number;
-  x?: number;
-  y?: number;
+  x: number;
+  y: number;
   marginTop?: number;
   placeSelf?: string;
   height?: number;
@@ -16,6 +16,7 @@ export interface DayCardProps {
   borderRadius?: string;
   borderBackground?: string;
   rotate?: string;
+  delay?: number | undefined;
 }
 
 export function DayCard({
@@ -30,9 +31,10 @@ export function DayCard({
   borderRadius,
   borderBackground,
   rotate,
+  delay,
 }: DayCardProps) {
   return (
-    <GridItem x={x} y={y} marginTop={marginTop} placeSelf={placeSelf}>
+    <GridItem x={x} delay={delay} y={y} marginTop={marginTop} placeSelf={placeSelf}>
       <motion.div
         whileHover={{ scale: 1.05, rotate: rotate }}
         whileTap={{ scale: 0.95, rotate: rotate }}

@@ -6,12 +6,13 @@ import GridItem from '../../components/grid-item/grid-item';
 /* eslint-disable-next-line */
 export interface ImageCardProps {
   uri: string;
-  x?: number;
-  y?: number;
+  x: number;
+  y: number;
   marginTop?: number;
   placeSelf?: string;
   rotate?: string;
   width: number;
+  delay?: number;
 }
 
 export function ImageCard({
@@ -22,18 +23,11 @@ export function ImageCard({
   placeSelf,
   rotate,
   width,
+  delay,
 }: ImageCardProps) {
   return (
-    <GridItem
-        x={x}
-        y={y}
-        marginTop={marginTop}
-        placeSelf={placeSelf}
-    >
-      <div
-        style={{rotate:rotate}}
-        className={styles['container']}
-      >
+    <GridItem x={x} delay={delay} y={y} marginTop={marginTop} placeSelf={placeSelf}>
+      <div style={{ rotate: rotate }} className={styles['container']}>
         <img
           className={styles['img-card']}
           src={uri}
