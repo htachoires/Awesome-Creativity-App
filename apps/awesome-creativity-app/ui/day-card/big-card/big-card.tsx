@@ -25,8 +25,8 @@ export function BigCard({
       delay={delay}
       marginY={marginY}
       placeSelf={placeSelf}
-      height={100}
-      width={150}
+      height={130}
+      width={170}
       color={'#F4D03F'}
       rotate={'-2deg'}
       borderBackground={'#145A32'}

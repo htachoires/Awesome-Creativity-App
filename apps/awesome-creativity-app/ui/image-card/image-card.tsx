@@ -14,6 +14,7 @@ export interface ImageCardProps {
   rotate?: string;
   width: number;
   delay?: number;
+  alignSelf?: string;
 }
 
 export function ImageCard({
@@ -26,15 +27,10 @@ export function ImageCard({
   width,
   delay,
   marginX,
+  alignSelf,
 }: ImageCardProps) {
   return (
-    <GridItem
-      x={x}
-      delay={delay}
-      y={y}
-      marginY={marginY}
-      placeSelf={placeSelf}
-    >
+    <GridItem x={x} delay={delay} y={y} marginY={marginY} placeSelf={placeSelf} alignSelf={alignSelf}>
       <div style={{ rotate: rotate }} className={styles['container']}>
         <img
           style={{ marginLeft: marginX }}

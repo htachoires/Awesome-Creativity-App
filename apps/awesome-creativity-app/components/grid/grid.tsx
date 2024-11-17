@@ -130,38 +130,65 @@ export default function Grid() {
             width={100}
             uri={'/img/lights.png'}
           />
-          <SmallDayCard day={4} x={6} y={++currentY} marginY={0} placeSelf={'end'} />
           <ImageCard
             x={2}
-            y={currentY}
-            marginY={20}
+            y={++currentY}
+            marginY={40}
             marginX={-30}
             rotate={'10deg'}
             placeSelf={'start'}
-            width={100}
+            width={140}
             uri={'/img/giftbox.png'}
           />
+          <SmallDayCard day={4} x={6} y={currentY} marginY={30} placeSelf={'center'} />
           <ImageCard
-            x={6}
+            x={7}
             y={currentY}
-            marginY={60}
+            marginY={20}
+            marginX={0}
+            rotate={'20deg'}
+            width={50}
+            uri={'/img/bauble-1.png'}
+          />
+          <BigCard day={5} x={2} y={++currentY} marginY={50} placeSelf={'start'} />
+          <ImageCard
+            x={7}
+            y={currentY}
+            marginY={-80}
             rotate={'-6deg'}
-            placeSelf={'start'}
+            placeSelf={'center'}
             width={90}
             uri={'/img/bauble-4.png'}
           />
           <ImageCard
-            x={5}
-            y={currentY}
-            marginY={130}
-            marginX={-15}
+            x={1}
+            y={++currentY}
+            marginY={30}
             rotate={'20deg'}
             placeSelf={'start'}
-            width={50}
-            uri={'/img/bauble-1.png'}
+            width={100}
+            uri={'/img/lights.png'}
           />
-          <BigCard day={5} x={3} y={++currentY} marginY={50} placeSelf={'start'} />
-          <SmallDayCard day={6} x={1} y={++currentY} marginY={130} />
+          <ImageCard
+            x={1}
+            y={currentY}
+            marginY={190}
+            rotate={'70deg'}
+            placeSelf={'start'}
+            width={100}
+            uri={'/img/lights.png'}
+          />
+          <ImageCard
+            x={4}
+            y={currentY}
+            marginY={50}
+            marginX={0}
+            rotate={'5deg'}
+            width={180}
+            placeSelf={"start"}
+            uri={'/img/7-pic.jpg'}
+          />
+          <SmallDayCard day={6} x={1} y={++currentY} marginY={30} />
           <SmallDayCard day={7} x={7} y={++currentY} marginY={40} placeSelf={'end'} />
           <ImageCard
             x={1}
