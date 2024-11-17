@@ -1,11 +1,25 @@
 .day-grid-item {
+  min-height: 110px;
+  min-width: 100px;
+  border: 10px solid #145A32;
+  border-radius: 91% 9% 88% 12% / 8% 89% 11% 92% ;
+}
+
+.inner-one {
+  background: #145A32;
+  width: 100%;
+  height: 110px;
+}
+
+.inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  height: 100px;
-  background: red;
+  background:  #922B21;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 91% 9% 88% 12% / 8% 89% 11% 92% ;
 }
 
 .day {

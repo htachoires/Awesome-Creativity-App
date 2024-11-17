@@ -1,13 +1,17 @@
 .page {
-  display: flex;
-  justify-content: center;
   padding-top: 20px;
+  text-align: center;
   padding-bottom: 50px;
+  background: #A1C6EA;
 }
 
 .grid-container {
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  margin-top: 50px;
   display: grid;
-  gap: 10px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(7, min(12vw, 80px));
 }
