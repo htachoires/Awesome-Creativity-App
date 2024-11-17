@@ -20,8 +20,9 @@ export function SmallCard({ day, x, y, marginTop, placeSelf }: BigCardProps) {
       height={100}
       width={100}
       color={'#922B21'}
-      borderBackground={"#145A32"}
-      borderRadius={"91% 9% 88% 12% / 8% 89% 11% 92%"}
+      rotate={"2deg"}
+      borderBackground={'#145A32'}
+      borderRadius={'91% 9% 88% 12% / 8% 89% 11% 92%'}
     />
   );
 }

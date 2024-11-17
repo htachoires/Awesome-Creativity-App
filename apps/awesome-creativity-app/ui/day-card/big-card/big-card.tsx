@@ -19,6 +19,7 @@ export function BigCard({ day, x, y, marginTop, placeSelf }: BigCardProps) {
       height={100}
       width={150}
       color={'#F4D03F'}
+      rotate={"-2deg"}
       borderBackground={"#145A32"}
       borderRadius={"16% 84% 16% 84% / 81% 12% 88% 19%"}
     />

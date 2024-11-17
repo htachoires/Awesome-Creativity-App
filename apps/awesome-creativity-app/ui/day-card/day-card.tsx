@@ -2,8 +2,8 @@
 
 import styles from './day-card.module.scss';
 import GridItem from '../../components/grid-item/grid-item';
+import { motion } from 'framer-motion';
 
-/* eslint-disable-next-line */
 export interface DayCardProps {
   day: number;
   x?: number;
@@ -15,6 +15,7 @@ export interface DayCardProps {
   color?: string;
   borderRadius?: string;
   borderBackground?: string;
+  rotate?: string;
 }
 
 export function DayCard({
@@ -28,29 +29,32 @@ export function DayCard({
   color,
   borderRadius,
   borderBackground,
+  rotate,
 }: DayCardProps) {
   return (
     <GridItem x={x} y={y} marginTop={marginTop} placeSelf={placeSelf}>
+      <motion.div
+        whileHover={{ scale: 1.05, rotate: rotate }}
+        whileTap={{ scale: 0.95, rotate: rotate }}
+        className={styles.dayCardContainer}
+        style={{
+          height: height,
+          width: width,
+          borderRadius: borderRadius,
+          backgroundColor: borderBackground,
+          borderColor: borderBackground,
+        }}
+      >
         <div
-          className={styles.dayCardContainer}
+          className={styles.dayCardInner}
           style={{
-            height: height,
-            width: width,
+            backgroundColor: color,
             borderRadius: borderRadius,
-            backgroundColor: borderBackground,
-            borderColor: borderBackground,
           }}
         >
-          <div
-            className={styles.dayCardInner}
-            style={{
-              backgroundColor: color,
-              borderRadius: borderRadius,
-            }}
-          >
-            <span className={styles.dayCardText}>{day}</span>
-          </div>
-      </div>
+          <span className={styles.dayCardText}>{day}</span>
+        </div>
+      </motion.div>
     </GridItem>
   );
 }
