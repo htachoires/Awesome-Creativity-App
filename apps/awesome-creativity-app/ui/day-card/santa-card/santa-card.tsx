@@ -2,8 +2,8 @@ import DayCard from '../day-card';
 
 export interface SantaCardProps {
   day: number;
-  x?: number;
-  y?: number;
+  x: number;
+  y: number;
   marginY?: number;
   placeSelf?: string;
 }
