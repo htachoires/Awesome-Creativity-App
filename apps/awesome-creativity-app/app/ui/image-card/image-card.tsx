@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './image-card.module.scss';
-import GridItem from '../../components/grid-item/grid-item';
+import GridItem from '../grid-item/grid-item';
 
 /* eslint-disable-next-line */
 export interface ImageCardProps {

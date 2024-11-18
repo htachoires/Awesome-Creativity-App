@@ -1,4 +1,4 @@
-import { motion, useScroll, Variants } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 export interface GridItemProps {
   x: number;

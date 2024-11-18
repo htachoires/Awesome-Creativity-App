@@ -2,17 +2,17 @@
 import { motion } from 'framer-motion';
 
 import styles from './grid.module.css';
-import SmallDayCard from '../../ui/day-card/small-card/small-day-card';
-import ImageCard from '../../ui/image-card/image-card';
-import BigCard from '../../ui/day-card/big-card/big-card';
-import SantaCard from '../../ui/day-card/santa-card/santa-card';
+import SmallDayCard from '../day-card/small-card/small-day-card';
+import ImageCard from '../image-card/image-card';
+import BigCard from '../day-card/big-card/big-card';
+import SantaCard from '../day-card/santa-card/santa-card';
 import { useEffect, useState } from 'react';
 
 export default function Grid() {
   const [isVisible, setIsVisible] = useState('none');
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible('grid'), 3700);
+    const timer = setTimeout(() => setIsVisible('grid'), 0);
     return () => clearTimeout(timer); // Nettoyage du timer
   }, []);
 

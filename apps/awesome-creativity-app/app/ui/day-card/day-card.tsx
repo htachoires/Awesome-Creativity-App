@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './day-card.module.scss';
-import GridItem from '../../components/grid-item/grid-item';
+import GridItem from '../grid-item/grid-item';
 import { motion } from 'framer-motion';
 
 export interface DayCardProps {
