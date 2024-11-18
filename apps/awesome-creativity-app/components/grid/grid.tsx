@@ -93,6 +93,7 @@ export default function Grid() {
             x={2}
             y={currentY}
             marginX={15}
+            delay={0.7}
             marginY={50}
             alignSelf={'start'}
             placeSelf={'center'}
@@ -102,6 +103,7 @@ export default function Grid() {
             y={currentY}
             rotate={'-3deg'}
             placeSelf={'start'}
+            delay={0.8}
             marginY={90}
             width={150}
             uri={'/img/2-pic.jpg'}

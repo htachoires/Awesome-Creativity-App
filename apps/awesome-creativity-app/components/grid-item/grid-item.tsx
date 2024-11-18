@@ -1,4 +1,4 @@
-import { motion, Variants } from 'framer-motion';
+import { motion, useScroll, Variants } from 'framer-motion';
 
 export interface GridItemProps {
   x: number;
@@ -23,10 +23,12 @@ export function GridItem({
 }: GridItemProps) {
   const cardVariants: Variants = {
     offscreen: {
-      y: 300,
+      y: 250,
+      opacity: 0
     },
     onscreen: {
-      y: 50,
+      y: 0,
+      opacity: 1,
       transition: {
         type: 'spring',
         bounce: 0.4,
@@ -47,7 +49,7 @@ export function GridItem({
         marginTop: marginY,
         marginLeft: marginX,
         placeSelf: placeSelf,
-        alignSelf: alignSelf
+        alignSelf: alignSelf,
       }}
     >
       <motion.div variants={cardVariants}>{children}</motion.div>
