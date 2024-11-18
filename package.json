@@ -5,7 +5,9 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@neondatabase/serverless": "^0.10.3",
     "@nx/next": "20.1.2",
+    "@vercel/postgres": "^0.10.0",
     "framer-motion": "^10.18.0",
     "next": "15.0.3",
     "react": "18.3.1",
