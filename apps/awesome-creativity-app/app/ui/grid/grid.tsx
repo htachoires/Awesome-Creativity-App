@@ -7,7 +7,7 @@ import ImageCard from '../image-card/image-card';
 import BigCard from '../day-card/big-card/big-card';
 import SantaCard from '../day-card/santa-card/santa-card';
 import { useEffect, useState } from 'react';
-import { SantaDay } from '../../api/santa-days/santaDay';
+import { SantaDay } from '../../lib/santa-days/santa-day';
 
 export interface GridProps {
   santaDays: SantaDay[];
