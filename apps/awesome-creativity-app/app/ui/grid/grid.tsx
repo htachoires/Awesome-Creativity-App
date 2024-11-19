@@ -17,7 +17,7 @@ export default function Grid({ santaDays }: GridProps) {
   const [isVisible, setIsVisible] = useState('none');
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible('grid'), 0);
+    const timer = setTimeout(() => setIsVisible('grid'), 3700);
     return () => clearTimeout(timer);
   }, []);
 
