@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 
 export interface DayCardProps {
   day: number;
+  isOpened: boolean;
   x: number;
   y: number;
   marginY?: number;
@@ -24,6 +25,7 @@ export interface DayCardProps {
 
 export function DayCard({
   day,
+  isOpened,
   x,
   y,
   marginY,
@@ -68,7 +70,10 @@ export function DayCard({
             borderRadius: borderRadius,
           }}
         >
-          <span style={{fontSize: fontSize}} className={styles.dayCardText}>{day}</span>
+          <span style={{ fontSize: fontSize }} className={styles.dayCardText}>
+            {day}
+          </span>
+          <span>{isOpened ? 'Ouvert' : 'Fermé'}</span>
         </div>
       </motion.div>
     </GridItem>

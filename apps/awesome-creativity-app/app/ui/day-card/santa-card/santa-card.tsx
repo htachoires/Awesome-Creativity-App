@@ -7,6 +7,7 @@ export interface SantaCardProps {
   marginY?: number;
   placeSelf?: string;
   marginX?: number;
+  isOpened: boolean;
 }
 
 export function SantaCard({
@@ -16,10 +17,12 @@ export function SantaCard({
   marginY,
   placeSelf,
   marginX,
+  isOpened,
 }: SantaCardProps) {
   return (
     <DayCard
       day={day}
+      isOpened={isOpened}
       x={x}
       y={y}
       marginY={marginY}

@@ -7,13 +7,18 @@ import ImageCard from '../image-card/image-card';
 import BigCard from '../day-card/big-card/big-card';
 import SantaCard from '../day-card/santa-card/santa-card';
 import { useEffect, useState } from 'react';
+import { SantaDay } from '../../api/santa-days/santaDay';
 
-export default function Grid() {
+export interface GridProps {
+  santaDays: SantaDay[];
+}
+
+export default function Grid({ santaDays }: GridProps) {
   const [isVisible, setIsVisible] = useState('none');
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible('grid'), 0);
-    return () => clearTimeout(timer); // Nettoyage du timer
+    return () => clearTimeout(timer);
   }, []);
 
   let currentY = 1;
@@ -25,7 +30,13 @@ export default function Grid() {
         className={styles['grid-container']}
       >
         <div className={styles['grid']}>
-          <SmallDayCard x={1} y={1} day={1} placeSelf={'start'} />
+          <SmallDayCard
+            x={1}
+            isOpened={santaDays[0].isOpened}
+            y={1}
+            day={1}
+            placeSelf={'start'}
+          />
           <ImageCard
             x={7}
             y={currentY}
@@ -50,6 +61,7 @@ export default function Grid() {
           <SmallDayCard
             day={2}
             delay={0.3}
+            isOpened={santaDays[1].isOpened}
             x={7}
             y={currentY}
             marginY={40}
@@ -90,6 +102,7 @@ export default function Grid() {
           />
           <SmallDayCard
             day={3}
+            isOpened={santaDays[2].isOpened}
             x={2}
             y={currentY}
             marginX={15}
@@ -138,7 +151,14 @@ export default function Grid() {
             width={140}
             uri={'/img/giftbox.png'}
           />
-          <SmallDayCard day={4} x={6} y={currentY} marginY={30} placeSelf={'center'} />
+          <SmallDayCard
+            day={4}
+            isOpened={santaDays[3].isOpened}
+            x={6}
+            y={currentY}
+            marginY={30}
+            placeSelf={'center'}
+          />
           <ImageCard
             x={7}
             y={currentY}
@@ -148,7 +168,14 @@ export default function Grid() {
             width={50}
             uri={'/img/bauble-1.png'}
           />
-          <BigCard day={5} x={2} y={++currentY} marginY={50} placeSelf={'start'} />
+          <BigCard
+            day={5}
+            isOpened={santaDays[4].isOpened}
+            x={2}
+            y={++currentY}
+            marginY={50}
+            placeSelf={'start'}
+          />
           <ImageCard
             x={7}
             y={currentY}
@@ -183,11 +210,24 @@ export default function Grid() {
             marginX={0}
             rotate={'5deg'}
             width={180}
-            placeSelf={"start"}
+            placeSelf={'start'}
             uri={'/img/7-pic.jpg'}
           />
-          <SmallDayCard day={6} x={1} y={++currentY} marginY={30} />
-          <SmallDayCard day={7} x={7} y={++currentY} marginY={40} placeSelf={'end'} />
+          <SmallDayCard
+            day={6}
+            isOpened={santaDays[5].isOpened}
+            x={1}
+            y={++currentY}
+            marginY={30}
+          />
+          <SmallDayCard
+            day={7}
+            isOpened={santaDays[6].isOpened}
+            x={7}
+            y={++currentY}
+            marginY={40}
+            placeSelf={'end'}
+          />
           <ImageCard
             x={1}
             y={++currentY}
@@ -197,30 +237,141 @@ export default function Grid() {
             width={180}
             uri={'/img/3-pic.jpg'}
           />
-          <SmallDayCard day={8} x={3} y={++currentY} marginY={160} />
+          <SmallDayCard
+            day={8}
+            isOpened={santaDays[7].isOpened}
+            x={3}
+            y={++currentY}
+            marginY={160}
+          />
           <SmallDayCard
             day={9}
+            isOpened={santaDays[8].isOpened}
             x={6}
             y={++currentY}
             marginY={150}
             placeSelf={'center'}
           />
-          <BigCard day={10} x={4} y={++currentY} marginY={150} placeSelf={'center'} />
-          <SmallDayCard day={11} x={1} y={++currentY} marginY={100} />
-          <SmallDayCard day={12} x={5} y={++currentY} marginY={200} />
-          <SmallDayCard day={13} x={2} y={++currentY} marginY={150} />
-          <SmallDayCard day={14} x={4} y={++currentY} marginY={250} placeSelf={'end'} />
-          <BigCard day={15} x={4} y={++currentY} marginY={150} placeSelf={'center'} />
-          <SmallDayCard day={16} x={5} y={++currentY} marginY={200} />
-          <SmallDayCard day={17} x={1} y={++currentY} marginY={150} />
-          <SmallDayCard day={18} x={5} y={++currentY} marginY={150} />
-          <SmallDayCard day={19} x={3} y={++currentY} marginY={150} placeSelf={'end'} />
-          <BigCard day={20} x={4} y={++currentY} marginY={150} placeSelf={'center'} />
-          <SmallDayCard day={21} x={1} y={++currentY} marginY={150} />
-          <SmallDayCard day={22} x={7} y={++currentY} marginY={150} placeSelf={'end'} />
-          <SmallDayCard day={23} x={3} y={++currentY} marginY={150} />
-          <SmallDayCard day={24} x={4} y={++currentY} marginY={150} />
-          <SantaCard day={25} x={3} y={++currentY} marginX={-15} marginY={90} placeSelf={'center'} />
+          <BigCard
+            day={10}
+            isOpened={santaDays[9].isOpened}
+            x={4}
+            y={++currentY}
+            marginY={150}
+            placeSelf={'center'}
+          />
+          <SmallDayCard
+            day={11}
+            isOpened={santaDays[10].isOpened}
+            x={1}
+            y={++currentY}
+            marginY={100}
+          />
+          <SmallDayCard
+            day={12}
+            isOpened={santaDays[11].isOpened}
+            x={5}
+            y={++currentY}
+            marginY={200}
+          />
+          <SmallDayCard
+            day={13}
+            isOpened={santaDays[12].isOpened}
+            x={2}
+            y={++currentY}
+            marginY={150}
+          />
+          <SmallDayCard
+            day={14}
+            isOpened={santaDays[13].isOpened}
+            x={4}
+            y={++currentY}
+            marginY={250}
+            placeSelf={'end'}
+          />
+          <BigCard
+            day={15}
+            isOpened={santaDays[14].isOpened}
+            x={4}
+            y={++currentY}
+            marginY={150}
+            placeSelf={'center'}
+          />
+          <SmallDayCard
+            day={16}
+            isOpened={santaDays[15].isOpened}
+            x={5}
+            y={++currentY}
+            marginY={200}
+          />
+          <SmallDayCard
+            day={17}
+            isOpened={santaDays[16].isOpened}
+            x={1}
+            y={++currentY}
+            marginY={150}
+          />
+          <SmallDayCard
+            day={18}
+            isOpened={santaDays[17].isOpened}
+            x={5}
+            y={++currentY}
+            marginY={150}
+          />
+          <SmallDayCard
+            day={19}
+            isOpened={santaDays[18].isOpened}
+            x={3}
+            y={++currentY}
+            marginY={150}
+            placeSelf={'end'}
+          />
+          <BigCard
+            day={20}
+            isOpened={santaDays[19].isOpened}
+            x={4}
+            y={++currentY}
+            marginY={150}
+            placeSelf={'center'}
+          />
+          <SmallDayCard
+            day={21}
+            isOpened={santaDays[20].isOpened}
+            x={1}
+            y={++currentY}
+            marginY={150}
+          />
+          <SmallDayCard
+            day={22}
+            isOpened={santaDays[21].isOpened}
+            x={7}
+            y={++currentY}
+            marginY={150}
+            placeSelf={'end'}
+          />
+          <SmallDayCard
+            day={23}
+            isOpened={santaDays[22].isOpened}
+            x={3}
+            y={++currentY}
+            marginY={150}
+          />
+          <SmallDayCard
+            day={24}
+            isOpened={santaDays[23].isOpened}
+            x={4}
+            y={++currentY}
+            marginY={150}
+          />
+          <SantaCard
+            day={25}
+            isOpened={santaDays[24].isOpened}
+            x={3}
+            y={++currentY}
+            marginX={-15}
+            marginY={90}
+            placeSelf={'center'}
+          />
           <ImageCard
             x={2}
             y={currentY}
@@ -232,9 +383,9 @@ export default function Grid() {
           <ImageCard
             x={2}
             y={++currentY}
-            placeSelf={"center"}
+            placeSelf={'center'}
             rotate={'0deg'}
-            alignSelf={"end"}
+            alignSelf={'end'}
             width={80}
             uri={'/img/gift-bag.png'}
           />

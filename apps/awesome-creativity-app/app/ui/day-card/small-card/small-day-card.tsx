@@ -9,6 +9,7 @@ export interface BigCardProps {
   placeSelf?: string;
   delay?: number;
   alignSelf?: string;
+  isOpened: boolean;
 }
 
 export function SmallDayCard({
@@ -20,12 +21,14 @@ export function SmallDayCard({
   delay,
   alignSelf,
   marginX,
+  isOpened,
 }: BigCardProps) {
   return (
     <DayCard
       day={day}
       x={x}
       y={y}
+      isOpened={isOpened}
       marginX={marginX}
       marginY={marginY}
       placeSelf={placeSelf}

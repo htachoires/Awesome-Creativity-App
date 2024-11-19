@@ -7,6 +7,7 @@ export interface BigCardProps {
   marginY?: number;
   placeSelf?: string;
   delay?: number;
+  isOpened: boolean;
 }
 
 export function BigCard({
@@ -16,10 +17,12 @@ export function BigCard({
   marginY,
   placeSelf,
   delay,
+  isOpened,
 }: BigCardProps) {
   return (
     <DayCard
       day={day}
+      isOpened={isOpened}
       x={x}
       y={y}
       delay={delay}
@@ -30,7 +33,7 @@ export function BigCard({
       color={'#F4D03F'}
       rotate={'-2deg'}
       borderBackground={'#145A32'}
-      fontSize={"4rem"}
+      fontSize={'4rem'}
       borderRadius={'16% 84% 16% 84% / 81% 12% 88% 19%'}
     />
   );
