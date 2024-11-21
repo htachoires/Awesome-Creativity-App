@@ -29,6 +29,7 @@ export function SantaCard({
       placeSelf={placeSelf}
       height={200}
       width={200}
+      rotateClick={'-2deg'}
       marginX={marginX}
       color={'#F4D03F'}
       borderBackground={'#145A32'}

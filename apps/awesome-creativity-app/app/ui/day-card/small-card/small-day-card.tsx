@@ -10,6 +10,7 @@ export interface BigCardProps {
   delay?: number;
   alignSelf?: string;
   isOpened: boolean;
+  rotateDirection?: string;
 }
 
 export function SmallDayCard({
@@ -21,6 +22,7 @@ export function SmallDayCard({
   delay,
   alignSelf,
   marginX,
+  rotateDirection = 'left',
   isOpened,
 }: BigCardProps) {
   return (
@@ -36,10 +38,10 @@ export function SmallDayCard({
       height={100}
       width={100}
       color={'#922B21'}
-      rotate={'2deg'}
+      rotateClick={'2deg'}
       borderBackground={'#145A32'}
       delay={delay}
-      borderRadius={'91% 9% 88% 12% / 8% 89% 11% 92%'}
+      borderRadius={rotateDirection == 'left' ? '91% 9% 88% 12% / 8% 89% 11% 92%' : '8% 89% 11% 92% / 91% 9% 88% 12%' }
     />
   );
 }

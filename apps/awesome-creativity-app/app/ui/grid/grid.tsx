@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import styles from './grid.module.css';
 import SmallDayCard from '../day-card/small-card/small-day-card';
 import ImageCard from '../image-card/image-card';
+import PicCard from '../pic-card/pic-card';
 import BigCard from '../day-card/big-card/big-card';
 import SantaCard from '../day-card/santa-card/santa-card';
 import { useEffect, useState } from 'react';
@@ -21,7 +22,7 @@ export default function Grid({ santaDays }: GridProps) {
     return () => clearTimeout(timer);
   }, []);
 
-  let currentY = 1;
+  let currentImg = 1;
 
   return (
     <div>
@@ -31,372 +32,568 @@ export default function Grid({ santaDays }: GridProps) {
       >
         <div className={styles['grid']}>
           <SmallDayCard
+            y={10}
             x={1}
-            isOpened={santaDays[0].isOpened}
-            y={1}
+            placeSelf={'start'}
+            rotateDirection={'left'}
             day={1}
-            placeSelf={'start'}
+            isOpened={santaDays[0].isOpened}
           />
-          <ImageCard
+          <PicCard
+            y={10}
             x={7}
-            y={currentY}
-            marginY={0}
+            placeSelf={'end'}
             delay={0.1}
-            rotate={'6deg'}
-            placeSelf={'end'}
-            width={160}
-            uri={'/img/1-pic.jpg'}
+            rotate={'3deg'}
+            width={170}
+            index={currentImg++}
           />
-          <ImageCard
-            x={4}
-            y={++currentY}
-            marginY={-250}
-            marginX={-25}
-            delay={0.2}
-            rotate={'0deg'}
-            placeSelf={'center'}
-            width={50}
-            uri={'/img/bauble-7.png'}
-          />
+          {/*<ImageCard*/}
+          {/*  uri={'/img/bauble-7.png'}*/}
+          {/*  y={10}*/}
+          {/*  x={4}*/}
+          {/*  marginY={100}
+          {/*  delay={0.2}*/}
+          {/*  rotate={'0deg'}*/}
+          {/*  placeSelf={'center'}*/}
+          {/*  width={50}*/}
+          {/*/>*/}
           <SmallDayCard
-            day={2}
-            delay={0.3}
-            isOpened={santaDays[1].isOpened}
+            y={20}
             x={7}
-            y={currentY}
-            marginY={40}
             placeSelf={'end'}
-            alignSelf={'start'}
+            marginY={100}
+            delay={0.2}
+            day={2}
+            isOpened={santaDays[1].isOpened}
           />
-          <ImageCard
+          <PicCard
+            y={20}
             x={1}
-            y={currentY}
-            delay={0.4}
-            marginY={80}
-            marginX={20}
-            rotate={'5deg'}
+            delay={0.3}
+            marginY={100}
+            rotate={'3deg'}
             placeSelf={'start'}
-            width={150}
-            uri={'/img/6-pic.jpg'}
+            width={170}
+            index={currentImg++}
           />
-          <ImageCard
-            x={6}
-            y={++currentY}
-            marginY={-120}
-            delay={0.5}
-            rotate={'-3deg'}
-            placeSelf={'start'}
-            width={100}
-            uri={'/img/bauble-1.png'}
-          />
-          <ImageCard
-            x={6}
-            y={currentY}
-            marginY={0}
-            marginX={-50}
-            delay={0.6}
-            rotate={'10deg'}
-            placeSelf={'start'}
-            width={50}
-            uri={'/img/bauble-3.png'}
-          />
+          {/*<ImageCard*/}
+          {/*  uri={'/img/bauble-1.png'}*/}
+          {/*  y={30}*/}
+          {/*  x={6}*/}
+          {/*  marginY={100}
+          {/*  delay={0.5}*/}
+          {/*  rotate={'-3deg'}*/}
+          {/*  placeSelf={'start'}*/}
+          {/*  width={100}*/}
+          {/*/>*/}
+          {/*<ImageCard*/}
+          {/*  uri={'/img/bauble-3.png'}*/}
+          {/*  y={30}*/}
+          {/*  x={6}*/}
+          {/*  marginY={100}
+          {/*  delay={0.6}*/}
+          {/*  rotate={'10deg'}*/}
+          {/*  placeSelf={'start'}*/}
+          {/*  width={50}*/}
+          {/*/>*/}
           <SmallDayCard
+            y={30}
+            x={1}
+            delay={0.4}
+            marginY={100}
+            placeSelf={'start'}
+            alignSelf={'end'}
+            rotateDirection={'left'}
             day={3}
             isOpened={santaDays[2].isOpened}
-            x={2}
-            y={currentY}
-            marginX={15}
-            delay={0.7}
-            marginY={50}
-            alignSelf={'start'}
-            placeSelf={'center'}
           />
-          <ImageCard
-            x={5}
-            y={currentY}
-            rotate={'-3deg'}
-            placeSelf={'start'}
-            delay={0.8}
-            marginY={90}
-            width={150}
-            uri={'/img/2-pic.jpg'}
+          <PicCard
+            y={30}
+            x={7}
+            placeSelf={'end'}
+            rotate={'3deg'}
+            delay={0.5}
+            marginY={100}
+            width={160}
+            index={currentImg++}
           />
-          <ImageCard
-            x={2}
-            y={++currentY}
-            marginY={0}
-            marginX={-30}
-            rotate={'70deg'}
-            placeSelf={'start'}
-            width={100}
-            uri={'/img/lights.png'}
-          />
-          <ImageCard
-            x={5}
-            y={currentY}
-            marginY={0}
-            marginX={30}
-            rotate={'120deg'}
-            placeSelf={'start'}
-            width={100}
-            uri={'/img/lights.png'}
-          />
-          <ImageCard
-            x={2}
-            y={++currentY}
-            marginY={40}
-            marginX={-30}
-            rotate={'10deg'}
-            placeSelf={'start'}
-            width={140}
-            uri={'/img/giftbox.png'}
-          />
+          {/*<ImageCard*/}
+          {/*  uri={'/img/lights.png'}*/}
+          {/*  y={50}*/}
+          {/*  x={2}*/}
+          {/*  marginY={100}
+          {/*  rotate={'70deg'}*/}
+          {/*  placeSelf={'start'}*/}
+          {/*  width={100}*/}
+          {/*/>*/}
+          {/*<ImageCard*/}
+          {/*  uri={'/img/lights.png'}*/}
+          {/*  y={50}*/}
+          {/*  x={5}*/}
+          {/*  marginY={100}
+          {/*  rotate={'120deg'}*/}
+          {/*  placeSelf={'start'}*/}
+          {/*  width={100}*/}
+          {/*/>*/}
+          {/*<ImageCard*/}
+          {/*  uri={'/img/giftbox.png'}*/}
+          {/*  y={60}*/}
+          {/*  x={2}*/}
+          {/*  marginY={100}
+          {/*  rotate={'10deg'}*/}
+          {/*  placeSelf={'start'}*/}
+          {/*  width={140}*/}
+          {/*/>*/}
           <SmallDayCard
+            delay={0.6}
+            y={40}
+            x={7}
+            placeSelf={'end'}
+            marginY={100}
+            rotateDirection={'right'}
             day={4}
             isOpened={santaDays[3].isOpened}
-            x={6}
-            y={currentY}
-            marginY={30}
-            placeSelf={'center'}
           />
-          <ImageCard
-            x={7}
-            y={currentY}
-            marginY={20}
-            marginX={0}
-            rotate={'20deg'}
-            width={50}
-            uri={'/img/bauble-1.png'}
+          <PicCard
+            y={40}
+            x={1}
+            placeSelf={'start'}
+            marginY={100}
+            rotate={'-3deg'}
+            width={170}
+            index={currentImg++}
           />
+          {/*<ImageCard*/}
+          {/*  uri={'/img/bauble-1.png'}*/}
+          {/*  y={60}*/}
+          {/*  x={7}*/}
+          {/*  marginY={100}
+          {/*  rotate={'20deg'}*/}
+          {/*  width={50}*/}
+          {/*/>*/}
           <BigCard
+            y={50}
+            x={4}
+            marginY={100}
+            placeSelf={'center'}
             day={5}
             isOpened={santaDays[4].isOpened}
-            x={2}
-            y={++currentY}
-            marginY={50}
-            placeSelf={'start'}
           />
-          <ImageCard
-            x={7}
-            y={currentY}
-            marginY={-80}
-            rotate={'-6deg'}
-            placeSelf={'center'}
-            width={90}
-            uri={'/img/bauble-4.png'}
-          />
-          <ImageCard
-            x={1}
-            y={++currentY}
-            marginY={30}
-            rotate={'20deg'}
-            placeSelf={'start'}
-            width={100}
-            uri={'/img/lights.png'}
-          />
-          <ImageCard
-            x={1}
-            y={currentY}
-            marginY={190}
-            rotate={'70deg'}
-            placeSelf={'start'}
-            width={100}
-            uri={'/img/lights.png'}
-          />
-          <ImageCard
+          <PicCard
+            y={51}
             x={4}
-            y={currentY}
-            marginY={50}
-            marginX={0}
-            rotate={'5deg'}
-            width={180}
-            placeSelf={'start'}
-            uri={'/img/7-pic.jpg'}
+            placeSelf={'center'}
+            marginY={100}
+            rotate={'0deg'}
+            width={320}
+            index={currentImg++}
           />
+          {/*<ImageCard*/}
+          {/*  uri={`/img/bauble-4.png`}*/}
+          {/*  y={70}*/}
+          {/*  x={7}*/}
+          {/*  marginY={100}
+          {/*  rotate={'-6deg'}*/}
+          {/*  placeSelf={'center'}*/}
+          {/*  width={90}*/}
+          {/*/>*/}
+          {/*<ImageCard*/}
+          {/*  uri={'/img/lights.png'}*/}
+          {/*  y={80}*/}
+          {/*  x={1}*/}
+          {/*  marginY={100}
+          {/*  rotate={'20deg'}*/}
+          {/*  placeSelf={'start'}*/}
+          {/*  width={100}*/}
+          {/*/>*/}
+          {/*<ImageCard*/}
+          {/*  uri={'/img/lights.png'}*/}
+          {/*  y={80}*/}
+          {/*  x={1}*/}
+          {/*  marginY={100}
+          {/*  rotate={'70deg'}*/}
+          {/*  placeSelf={'start'}*/}
+          {/*  width={100}*/}
+          {/*/>*/}
           <SmallDayCard
-            day={6}
-            isOpened={santaDays[5].isOpened}
+            y={60}
             x={1}
-            y={++currentY}
-            marginY={30}
+            marginY={100}
+            day={6}
+            rotateDirection={'right'}
+            isOpened={santaDays[5].isOpened}
+          />
+          <PicCard
+            y={60}
+            x={7}
+            placeSelf={'end'}
+            marginY={100}
+            rotate={'-3deg'}
+            width={180}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={70}
+            x={7}
+            placeSelf={'end'}
+            rotateDirection={'right'}
             day={7}
             isOpened={santaDays[6].isOpened}
-            x={7}
-            y={++currentY}
-            marginY={40}
-            placeSelf={'end'}
           />
-          <ImageCard
+          <PicCard
+            y={70}
             x={1}
-            y={++currentY}
-            marginY={0}
-            rotate={'-6deg'}
-            placeSelf={'start'}
+            marginY={100}
+            rotate={'-3deg'}
             width={180}
-            uri={'/img/3-pic.jpg'}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={80}
+            x={1}
+            marginY={100}
+            rotateDirection={'right'}
             day={8}
             isOpened={santaDays[7].isOpened}
-            x={3}
-            y={++currentY}
-            marginY={160}
+          />
+          <PicCard
+            y={80}
+            x={7}
+            marginY={100}
+            rotate={'-3deg'}
+            placeSelf={'end'}
+            width={170}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={90}
+            x={6}
+            marginY={100}
+            placeSelf={'center'}
+            rotateDirection={'right'}
             day={9}
             isOpened={santaDays[8].isOpened}
-            x={6}
-            y={++currentY}
-            marginY={150}
-            placeSelf={'center'}
+          />
+          <PicCard
+            y={90}
+            x={1}
+            marginY={100}
+            rotate={'-3deg'}
+            placeSelf={'start'}
+            width={160}
+            index={currentImg++}
           />
           <BigCard
+            y={100}
+            x={4}
+            placeSelf={'center'}
+            marginY={100}
             day={10}
             isOpened={santaDays[9].isOpened}
-            x={4}
-            y={++currentY}
-            marginY={150}
-            placeSelf={'center'}
+          />
+          <PicCard
+            y={101}
+            x={1}
+            placeSelf={'start'}
+            marginY={60}
+            rotate={'2deg'}
+            width={110}
+            index={currentImg++}
+          />
+          <PicCard
+            y={101}
+            x={1}
+            placeSelf={'start'}
+            marginY={290}
+            marginX={15}
+            rotate={'-10deg'}
+            width={100}
+            index={currentImg++}
+          />
+          <PicCard
+            y={101}
+            x={7}
+            placeSelf={'end'}
+            alignSelf={'start'}
+            marginY={100}
+            rotate={'-3deg'}
+            width={180}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={110}
+            x={1}
+            marginY={100}
             day={11}
             isOpened={santaDays[10].isOpened}
-            x={1}
-            y={++currentY}
+          />
+          <PicCard
+            y={110}
+            x={7}
+            placeSelf={'end'}
             marginY={100}
+            rotate={'3deg'}
+            width={150}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={120}
+            x={7}
+            placeSelf={'end'}
+            marginY={100}
+            rotateDirection={'left'}
             day={12}
             isOpened={santaDays[11].isOpened}
-            x={5}
-            y={++currentY}
-            marginY={200}
+          />
+          <PicCard
+            y={120}
+            x={1}
+            placeSelf={'start'}
+            marginY={100}
+            rotate={'3deg'}
+            width={180}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={130}
+            x={1}
+            marginY={100}
             day={13}
             isOpened={santaDays[12].isOpened}
-            x={2}
-            y={++currentY}
-            marginY={150}
+          />
+          <PicCard
+            y={130}
+            x={7}
+            placeSelf={'end'}
+            marginY={100}
+            rotate={'3deg'}
+            width={150}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={140}
+            x={7}
+            placeSelf={'end'}
+            marginY={100}
+            rotateDirection={'left'}
             day={14}
             isOpened={santaDays[13].isOpened}
-            x={4}
-            y={++currentY}
-            marginY={250}
-            placeSelf={'end'}
+          />
+          <PicCard
+            y={140}
+            x={1}
+            marginY={100}
+            rotate={'3deg'}
+            placeSelf={'start'}
+            width={150}
+            index={currentImg++}
           />
           <BigCard
+            y={150}
+            x={4}
+            marginY={100}
+            placeSelf={'center'}
             day={15}
             isOpened={santaDays[14].isOpened}
-            x={4}
-            y={++currentY}
-            marginY={150}
-            placeSelf={'center'}
           />
           <SmallDayCard
+            y={160}
+            x={7}
+            placeSelf={'end'}
+            marginY={100}
+            rotateDirection={'right'}
             day={16}
             isOpened={santaDays[15].isOpened}
-            x={5}
-            y={++currentY}
-            marginY={200}
+          />
+          <PicCard
+            y={160}
+            x={1}
+            marginY={100}
+            rotate={'-3deg'}
+            placeSelf={'start'}
+            width={150}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={170}
+            x={1}
+            marginY={100}
+            rotateDirection={'right'}
             day={17}
             isOpened={santaDays[16].isOpened}
-            x={1}
-            y={++currentY}
-            marginY={150}
+          />
+          <PicCard
+            y={170}
+            x={7}
+            placeSelf={'end'}
+            marginY={100}
+            rotate={'-3deg'}
+            width={150}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={180}
+            x={7}
+            placeSelf={'end'}
+            alignSelf={'end'}
+            marginY={100}
             day={18}
             isOpened={santaDays[17].isOpened}
-            x={5}
-            y={++currentY}
-            marginY={150}
+          />
+          <PicCard
+            y={180}
+            x={1}
+            marginY={100}
+            rotate={'3deg'}
+            placeSelf={'start'}
+            width={150}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={190}
+            x={1}
+            marginY={100}
+            alignSelf={'end'}
             day={19}
             isOpened={santaDays[18].isOpened}
-            x={3}
-            y={++currentY}
-            marginY={150}
+          />
+          <PicCard
+            y={190}
+            x={7}
             placeSelf={'end'}
+            marginY={100}
+            rotate={'3deg'}
+            width={150}
+            index={currentImg++}
+          />
+          <PicCard
+            y={200}
+            x={4}
+            placeSelf={'center'}
+            marginY={100}
+            rotate={'0deg'}
+            width={300}
+            index={currentImg++}
           />
           <BigCard
+            y={210}
+            x={4}
+            placeSelf={'center'}
+            marginY={100}
             day={20}
             isOpened={santaDays[19].isOpened}
-            x={4}
-            y={++currentY}
-            marginY={150}
-            placeSelf={'center'}
           />
           <SmallDayCard
+            y={220}
+            x={7}
+            placeSelf={'end'}
+            alignSelf={'start'}
+            marginY={100}
             day={21}
             isOpened={santaDays[20].isOpened}
+          />
+          <PicCard
+            y={220}
             x={1}
-            y={++currentY}
-            marginY={150}
+            marginY={100}
+            rotate={'3deg'}
+            placeSelf={'start'}
+            width={150}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={230}
+            x={1}
+            marginY={100}
             day={22}
             isOpened={santaDays[21].isOpened}
+          />
+          <PicCard
+            y={230}
             x={7}
-            y={++currentY}
-            marginY={150}
             placeSelf={'end'}
+            marginY={100}
+            rotate={'3deg'}
+            width={180}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={240}
+            x={7}
+            placeSelf={'end'}
+            alignSelf={'start'}
+            marginY={100}
             day={23}
             isOpened={santaDays[22].isOpened}
-            x={3}
-            y={++currentY}
-            marginY={150}
+          />
+          <PicCard
+            y={240}
+            x={1}
+            marginY={100}
+            rotate={'3deg'}
+            width={150}
+            index={currentImg++}
           />
           <SmallDayCard
+            y={250}
+            x={1}
+            marginY={100}
             day={24}
             isOpened={santaDays[23].isOpened}
-            x={4}
-            y={++currentY}
-            marginY={150}
+          />
+          <PicCard
+            y={250}
+            x={7}
+            placeSelf={'end'}
+            marginY={100}
+            rotate={'3deg'}
+            width={150}
+            index={currentImg++}
           />
           <SantaCard
+            y={330}
+            x={3}
+            marginY={100}
+            placeSelf={'center'}
             day={25}
             isOpened={santaDays[24].isOpened}
-            x={3}
-            y={++currentY}
-            marginX={-15}
-            marginY={90}
-            placeSelf={'center'}
+          />
+          <PicCard
+            y={320}
+            x={1}
+            marginY={100}
+            rotate={'3deg'}
+            placeSelf={'start'}
+            width={150}
+            index={currentImg++}
           />
           <ImageCard
+            uri={'/img/secret-santa.png'}
+            y={330}
             x={2}
-            y={currentY}
-            marginY={108}
+            marginY={117}
+            marginX={5}
             rotate={'4deg'}
             width={65}
-            uri={'/img/secret-santa.png'}
           />
           <ImageCard
+            uri={'/img/gift-bag.png'}
+            y={340}
             x={2}
-            y={++currentY}
             placeSelf={'center'}
             rotate={'0deg'}
             alignSelf={'end'}
             width={80}
-            uri={'/img/gift-bag.png'}
           />
           <ImageCard
+            uri={'/img/christmas-tree.png'}
+            y={340}
             x={7}
-            y={currentY}
-            marginY={-50}
+            marginY={100}
             rotate={'0deg'}
             placeSelf={'end'}
             width={180}
-            uri={'/img/christmas-tree.png'}
           />
         </div>
       </motion.div>

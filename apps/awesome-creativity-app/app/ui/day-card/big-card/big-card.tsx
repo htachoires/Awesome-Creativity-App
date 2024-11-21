@@ -31,7 +31,7 @@ export function BigCard({
       height={130}
       width={170}
       color={'#F4D03F'}
-      rotate={'-2deg'}
+      rotateClick={'-2deg'}
       borderBackground={'#145A32'}
       fontSize={'4rem'}
       borderRadius={'16% 84% 16% 84% / 81% 12% 88% 19%'}

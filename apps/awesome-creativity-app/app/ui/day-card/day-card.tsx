@@ -2,7 +2,8 @@
 
 import styles from './day-card.module.scss';
 import GridItem from '../grid-item/grid-item';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
+import { useState } from 'react';
 
 export interface DayCardProps {
   day: number;
@@ -16,6 +17,7 @@ export interface DayCardProps {
   color?: string;
   borderRadius?: string;
   borderBackground?: string;
+  rotateClick?: string;
   rotate?: string;
   delay?: number | undefined;
   alignSelf?: string | undefined;
@@ -35,12 +37,42 @@ export function DayCard({
   color,
   borderRadius,
   borderBackground,
-  rotate,
+  rotateClick,
   delay,
   alignSelf,
   marginX,
   fontSize,
 }: DayCardProps) {
+  const [currentVariant, setCurrentVariant] = useState('');
+
+  const variantsParents: Variants = {
+    open: {
+      scale: 1.1,
+      transition: { type: 'spring', duration: 2 },
+    },
+    tryOpen: {
+      scale: 0.95,
+      rotate: rotateClick,
+    },
+    hover: {
+      scale: 1.05,
+      rotate: rotateClick,
+    },
+  };
+
+  const variants: Variants = {
+    open: {
+      translateY: '100px',
+      scale: 0.3,
+      opacity: 0,
+      transition: {
+        translateY: { type: 'spring', duration: 9 },
+        scale: { ease: 'easeOut', duration: 2 },
+        opacity: { ease: 'easeOut', duration: 8 },
+      },
+    },
+  };
+
   return (
     <GridItem
       x={x}
@@ -52,9 +84,14 @@ export function DayCard({
       alignSelf={alignSelf}
     >
       <motion.div
-        whileHover={{ scale: 1.05, rotate: rotate }}
-        whileTap={{ scale: 0.95, rotate: rotate }}
+        whileHover={currentVariant != 'open' ? 'hover' : ''}
+        whileTap={currentVariant != 'open' ? 'tryOpen' : ''}
+        onMouseUp={(event) => {
+          setCurrentVariant('open');
+        }}
         className={styles.dayCardContainer}
+        variants={variantsParents}
+        animate={currentVariant}
         style={{
           height: height,
           width: width,
@@ -63,18 +100,20 @@ export function DayCard({
           borderColor: borderBackground,
         }}
       >
-        <div
+        <motion.div
           className={styles.dayCardInner}
           style={{
             backgroundColor: color,
             borderRadius: borderRadius,
           }}
+          variants={variants}
+          animate={currentVariant}
         >
           <span style={{ fontSize: fontSize }} className={styles.dayCardText}>
             {day}
           </span>
           <span>{isOpened ? 'Ouvert' : 'Fermé'}</span>
-        </div>
+        </motion.div>
       </motion.div>
     </GridItem>
   );
