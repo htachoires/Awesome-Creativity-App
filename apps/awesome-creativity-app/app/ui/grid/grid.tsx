@@ -22,8 +22,6 @@ export default function Grid({ santaDays }: GridProps) {
     return () => clearTimeout(timer);
   }, []);
 
-  let currentImg = 1;
-
   return (
     <div>
       <motion.div
@@ -46,7 +44,7 @@ export default function Grid({ santaDays }: GridProps) {
             delay={0.1}
             rotate={'3deg'}
             width={170}
-            index={currentImg++}
+            index={1}
           />
           {/*<ImageCard*/}
           {/*  uri={'/img/bauble-7.png'}*/}
@@ -75,7 +73,7 @@ export default function Grid({ santaDays }: GridProps) {
             rotate={'3deg'}
             placeSelf={'start'}
             width={170}
-            index={currentImg++}
+            index={2}
           />
           {/*<ImageCard*/}
           {/*  uri={'/img/bauble-1.png'}*/}
@@ -116,7 +114,7 @@ export default function Grid({ santaDays }: GridProps) {
             delay={0.5}
             marginY={100}
             width={160}
-            index={currentImg++}
+            index={3}
           />
           {/*<ImageCard*/}
           {/*  uri={'/img/lights.png'}*/}
@@ -162,7 +160,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'-3deg'}
             width={170}
-            index={currentImg++}
+            index={4}
           />
           {/*<ImageCard*/}
           {/*  uri={'/img/bauble-1.png'}*/}
@@ -187,7 +185,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'0deg'}
             width={320}
-            index={currentImg++}
+            index={5}
           />
           {/*<ImageCard*/}
           {/*  uri={`/img/bauble-4.png`}*/}
@@ -231,7 +229,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'-3deg'}
             width={180}
-            index={currentImg++}
+            index={6}
           />
           <SmallDayCard
             y={70}
@@ -244,10 +242,11 @@ export default function Grid({ santaDays }: GridProps) {
           <PicCard
             y={70}
             x={1}
+            placeSelf={'start'}
             marginY={100}
             rotate={'-3deg'}
             width={180}
-            index={currentImg++}
+            index={7}
           />
           <SmallDayCard
             y={80}
@@ -264,7 +263,7 @@ export default function Grid({ santaDays }: GridProps) {
             rotate={'-3deg'}
             placeSelf={'end'}
             width={170}
-            index={currentImg++}
+            index={8}
           />
           <SmallDayCard
             y={90}
@@ -282,7 +281,7 @@ export default function Grid({ santaDays }: GridProps) {
             rotate={'-3deg'}
             placeSelf={'start'}
             width={160}
-            index={currentImg++}
+            index={9}
           />
           <BigCard
             y={100}
@@ -299,7 +298,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={60}
             rotate={'2deg'}
             width={110}
-            index={currentImg++}
+            index={10}
           />
           <PicCard
             y={101}
@@ -309,7 +308,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginX={15}
             rotate={'-10deg'}
             width={100}
-            index={currentImg++}
+            index={11}
           />
           <PicCard
             y={101}
@@ -319,7 +318,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'-3deg'}
             width={180}
-            index={currentImg++}
+            index={12}
           />
           <SmallDayCard
             y={110}
@@ -335,7 +334,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'3deg'}
             width={150}
-            index={currentImg++}
+            index={13}
           />
           <SmallDayCard
             y={120}
@@ -353,7 +352,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'3deg'}
             width={180}
-            index={currentImg++}
+            index={14}
           />
           <SmallDayCard
             y={130}
@@ -369,7 +368,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'3deg'}
             width={150}
-            index={currentImg++}
+            index={15}
           />
           <SmallDayCard
             y={140}
@@ -387,7 +386,7 @@ export default function Grid({ santaDays }: GridProps) {
             rotate={'3deg'}
             placeSelf={'start'}
             width={150}
-            index={currentImg++}
+            index={16}
           />
           <BigCard
             y={150}
@@ -413,7 +412,7 @@ export default function Grid({ santaDays }: GridProps) {
             rotate={'-3deg'}
             placeSelf={'start'}
             width={150}
-            index={currentImg++}
+            index={17}
           />
           <SmallDayCard
             y={170}
@@ -430,7 +429,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'-3deg'}
             width={150}
-            index={currentImg++}
+            index={18}
           />
           <SmallDayCard
             y={180}
@@ -448,7 +447,7 @@ export default function Grid({ santaDays }: GridProps) {
             rotate={'3deg'}
             placeSelf={'start'}
             width={150}
-            index={currentImg++}
+            index={19}
           />
           <SmallDayCard
             y={190}
@@ -465,7 +464,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'3deg'}
             width={150}
-            index={currentImg++}
+            index={20}
           />
           <PicCard
             y={200}
@@ -474,7 +473,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'0deg'}
             width={300}
-            index={currentImg++}
+            index={21}
           />
           <BigCard
             y={210}
@@ -500,7 +499,7 @@ export default function Grid({ santaDays }: GridProps) {
             rotate={'3deg'}
             placeSelf={'start'}
             width={150}
-            index={currentImg++}
+            index={22}
           />
           <SmallDayCard
             y={230}
@@ -516,7 +515,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'3deg'}
             width={180}
-            index={currentImg++}
+            index={23}
           />
           <SmallDayCard
             y={240}
@@ -530,10 +529,11 @@ export default function Grid({ santaDays }: GridProps) {
           <PicCard
             y={240}
             x={1}
+            placeSelf={'start'}
             marginY={100}
             rotate={'3deg'}
             width={150}
-            index={currentImg++}
+            index={24}
           />
           <SmallDayCard
             y={250}
@@ -549,31 +549,32 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotate={'3deg'}
             width={150}
-            index={currentImg++}
+            index={24}
           />
           <SantaCard
             y={330}
-            x={3}
+            x={4}
             marginY={100}
             placeSelf={'center'}
             day={25}
             isOpened={santaDays[24].isOpened}
           />
           <PicCard
-            y={320}
+            y={340}
             x={1}
-            marginY={100}
+            marginY={40}
             rotate={'3deg'}
             placeSelf={'start'}
             width={150}
-            index={currentImg++}
+            index={24}
           />
           <ImageCard
             uri={'/img/secret-santa.png'}
             y={330}
-            x={2}
-            marginY={117}
-            marginX={5}
+            x={4}
+            placeSelf={'start'}
+            marginY={118}
+            marginX={-45}
             rotate={'4deg'}
             width={65}
           />
