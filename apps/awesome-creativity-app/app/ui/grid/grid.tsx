@@ -18,7 +18,7 @@ export default function Grid({ santaDays }: GridProps) {
   const [isVisible, setIsVisible] = useState('none');
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible('grid'), 3700);
+    const timer = setTimeout(() => setIsVisible('grid'), 4700);
     return () => clearTimeout(timer);
   }, []);
 
@@ -32,6 +32,7 @@ export default function Grid({ santaDays }: GridProps) {
           <SmallDayCard
             y={10}
             x={1}
+            delay={0.1}
             placeSelf={'start'}
             rotateDirection={'left'}
             day={1}
@@ -41,7 +42,7 @@ export default function Grid({ santaDays }: GridProps) {
             y={10}
             x={7}
             placeSelf={'end'}
-            delay={0.1}
+            delay={0.15}
             rotate={'3deg'}
             width={170}
             index={1}

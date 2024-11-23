@@ -14,7 +14,7 @@ const defaultAnimation: Variants = {
 };
 
 export default function Title() {
-  const words = "Calendrier de l'Avant 2024 pour mon Chat ❄️❤️";
+  const words = "Calendrier de l'Avent 2024 pour mon Chat ❄️❤️";
 
   const ref = useRef(null)
   const isInView = useInView(ref, { amount: 0.5, once: true });
