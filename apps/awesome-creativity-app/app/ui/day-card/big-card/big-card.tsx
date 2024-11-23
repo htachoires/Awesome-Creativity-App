@@ -1,4 +1,5 @@
 import DayCard from '../day-card';
+import { SantaDay } from '../../../lib/santa-days/santa-day';
 
 export interface BigCardProps {
   day: number;
@@ -7,7 +8,7 @@ export interface BigCardProps {
   marginY?: number;
   placeSelf?: string;
   delay?: number;
-  isOpened: boolean;
+  santaDay: SantaDay;
 }
 
 export function BigCard({
@@ -17,12 +18,12 @@ export function BigCard({
   marginY,
   placeSelf,
   delay,
-  isOpened,
+  santaDay,
 }: BigCardProps) {
   return (
     <DayCard
       day={day}
-      isOpened={isOpened}
+      santaDay={santaDay}
       x={x}
       y={y}
       delay={delay}

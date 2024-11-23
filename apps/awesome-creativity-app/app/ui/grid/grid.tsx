@@ -36,7 +36,7 @@ export default function Grid({ santaDays }: GridProps) {
             placeSelf={'start'}
             rotateDirection={'left'}
             day={1}
-            isOpened={santaDays[0].isOpened}
+            santaDay={santaDays[0]}
           />
           <PicCard
             y={10}
@@ -64,7 +64,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             delay={0.2}
             day={2}
-            isOpened={santaDays[1].isOpened}
+            santaDay={santaDays[1]}
           />
           <PicCard
             y={20}
@@ -105,7 +105,7 @@ export default function Grid({ santaDays }: GridProps) {
             alignSelf={'end'}
             rotateDirection={'left'}
             day={3}
-            isOpened={santaDays[2].isOpened}
+            santaDay={santaDays[2]}
           />
           <PicCard
             y={30}
@@ -152,7 +152,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotateDirection={'right'}
             day={4}
-            isOpened={santaDays[3].isOpened}
+            santaDay={santaDays[3]}
           />
           <PicCard
             y={40}
@@ -177,7 +177,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             placeSelf={'center'}
             day={5}
-            isOpened={santaDays[4].isOpened}
+            santaDay={santaDays[4]}
           />
           <PicCard
             y={51}
@@ -221,7 +221,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             day={6}
             rotateDirection={'right'}
-            isOpened={santaDays[5].isOpened}
+            santaDay={santaDays[5]}
           />
           <PicCard
             y={60}
@@ -238,7 +238,7 @@ export default function Grid({ santaDays }: GridProps) {
             placeSelf={'end'}
             rotateDirection={'right'}
             day={7}
-            isOpened={santaDays[6].isOpened}
+            santaDay={santaDays[6]}
           />
           <PicCard
             y={70}
@@ -255,7 +255,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotateDirection={'right'}
             day={8}
-            isOpened={santaDays[7].isOpened}
+            santaDay={santaDays[7]}
           />
           <PicCard
             y={80}
@@ -273,7 +273,7 @@ export default function Grid({ santaDays }: GridProps) {
             placeSelf={'center'}
             rotateDirection={'right'}
             day={9}
-            isOpened={santaDays[8].isOpened}
+            santaDay={santaDays[8]}
           />
           <PicCard
             y={90}
@@ -290,7 +290,7 @@ export default function Grid({ santaDays }: GridProps) {
             placeSelf={'center'}
             marginY={100}
             day={10}
-            isOpened={santaDays[9].isOpened}
+            santaDay={santaDays[9]}
           />
           <PicCard
             y={101}
@@ -326,7 +326,7 @@ export default function Grid({ santaDays }: GridProps) {
             x={1}
             marginY={100}
             day={11}
-            isOpened={santaDays[10].isOpened}
+            santaDay={santaDays[10]}
           />
           <PicCard
             y={110}
@@ -344,7 +344,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotateDirection={'left'}
             day={12}
-            isOpened={santaDays[11].isOpened}
+            santaDay={santaDays[11]}
           />
           <PicCard
             y={120}
@@ -360,7 +360,7 @@ export default function Grid({ santaDays }: GridProps) {
             x={1}
             marginY={100}
             day={13}
-            isOpened={santaDays[12].isOpened}
+            santaDay={santaDays[12]}
           />
           <PicCard
             y={130}
@@ -378,7 +378,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotateDirection={'left'}
             day={14}
-            isOpened={santaDays[13].isOpened}
+            santaDay={santaDays[13]}
           />
           <PicCard
             y={140}
@@ -395,7 +395,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             placeSelf={'center'}
             day={15}
-            isOpened={santaDays[14].isOpened}
+            santaDay={santaDays[14]}
           />
           <SmallDayCard
             y={160}
@@ -404,7 +404,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotateDirection={'right'}
             day={16}
-            isOpened={santaDays[15].isOpened}
+            santaDay={santaDays[15]}
           />
           <PicCard
             y={160}
@@ -421,7 +421,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             rotateDirection={'right'}
             day={17}
-            isOpened={santaDays[16].isOpened}
+            santaDay={santaDays[16]}
           />
           <PicCard
             y={170}
@@ -439,7 +439,7 @@ export default function Grid({ santaDays }: GridProps) {
             alignSelf={'end'}
             marginY={100}
             day={18}
-            isOpened={santaDays[17].isOpened}
+            santaDay={santaDays[17]}
           />
           <PicCard
             y={180}
@@ -456,7 +456,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             alignSelf={'end'}
             day={19}
-            isOpened={santaDays[18].isOpened}
+            santaDay={santaDays[18]}
           />
           <PicCard
             y={190}
@@ -482,7 +482,7 @@ export default function Grid({ santaDays }: GridProps) {
             placeSelf={'center'}
             marginY={100}
             day={20}
-            isOpened={santaDays[19].isOpened}
+            santaDay={santaDays[19]}
           />
           <SmallDayCard
             y={220}
@@ -491,7 +491,7 @@ export default function Grid({ santaDays }: GridProps) {
             alignSelf={'start'}
             marginY={100}
             day={21}
-            isOpened={santaDays[20].isOpened}
+            santaDay={santaDays[20]}
           />
           <PicCard
             y={220}
@@ -507,7 +507,7 @@ export default function Grid({ santaDays }: GridProps) {
             x={1}
             marginY={100}
             day={22}
-            isOpened={santaDays[21].isOpened}
+            santaDay={santaDays[21]}
           />
           <PicCard
             y={230}
@@ -525,7 +525,7 @@ export default function Grid({ santaDays }: GridProps) {
             alignSelf={'start'}
             marginY={100}
             day={23}
-            isOpened={santaDays[22].isOpened}
+            santaDay={santaDays[22]}
           />
           <PicCard
             y={240}
@@ -541,7 +541,7 @@ export default function Grid({ santaDays }: GridProps) {
             x={1}
             marginY={100}
             day={24}
-            isOpened={santaDays[23].isOpened}
+            santaDay={santaDays[23]}
           />
           <PicCard
             y={250}
@@ -558,7 +558,7 @@ export default function Grid({ santaDays }: GridProps) {
             marginY={100}
             placeSelf={'center'}
             day={25}
-            isOpened={santaDays[24].isOpened}
+            santaDay={santaDays[24]}
           />
           <PicCard
             y={340}

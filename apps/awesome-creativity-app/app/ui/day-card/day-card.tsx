@@ -4,10 +4,11 @@ import styles from './day-card.module.scss';
 import GridItem from '../grid-item/grid-item';
 import { motion, Variants } from 'framer-motion';
 import { useState } from 'react';
+import { SantaDay } from '../../lib/santa-days/santa-day';
 
 export interface DayCardProps {
   day: number;
-  isOpened: boolean;
+  santaDay: SantaDay;
   x: number;
   y: number;
   marginY?: number;
@@ -27,7 +28,7 @@ export interface DayCardProps {
 
 export function DayCard({
   day,
-  isOpened,
+  santaDay,
   x,
   y,
   marginY,
@@ -88,10 +89,11 @@ export function DayCard({
         whileTap={currentVariant != 'open' ? 'tryOpen' : ''}
         onMouseUp={(event) => {
           setCurrentVariant('open');
+          //TODO send open to database
         }}
         className={styles.dayCardContainer}
-        variants={variantsParents}
         animate={currentVariant}
+        variants={variantsParents}
         style={{
           height: height,
           width: width,
@@ -112,7 +114,7 @@ export function DayCard({
           <span style={{ fontSize: fontSize }} className={styles.dayCardText}>
             {day}
           </span>
-          <span>{isOpened ? 'Ouvert' : 'Fermé'}</span>
+          <span>{santaDay.isOpened ? 'Ouvert' : 'Fermé'}</span>
         </motion.div>
       </motion.div>
     </GridItem>

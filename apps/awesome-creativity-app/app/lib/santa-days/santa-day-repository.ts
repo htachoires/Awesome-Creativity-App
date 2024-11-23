@@ -8,9 +8,18 @@ export async function GetSantaDays(): Promise<SantaDay[]> {
                    ORDER BY day`.then((x) =>
     x.rows.map((x) => {
       return {
+        id: x.id,
         isOpened: x.is_opened,
         day: x.day,
       };
     })
   );
+}
+
+export async function CloseSantaDay(santaId: string): Promise<boolean> {
+  return await sql`UPDATE santa_day
+                   SET is_opened = false
+                   WHERE id = ${santaId}`.then((x) => {
+    return true;
+  });
 }

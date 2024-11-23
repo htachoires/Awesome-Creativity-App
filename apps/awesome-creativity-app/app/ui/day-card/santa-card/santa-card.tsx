@@ -1,4 +1,5 @@
 import DayCard from '../day-card';
+import { SantaDay } from '../../../lib/santa-days/santa-day';
 
 export interface SantaCardProps {
   day: number;
@@ -7,7 +8,7 @@ export interface SantaCardProps {
   marginY?: number;
   placeSelf?: string;
   marginX?: number;
-  isOpened: boolean;
+  santaDay: SantaDay;
 }
 
 export function SantaCard({
@@ -17,12 +18,12 @@ export function SantaCard({
   marginY,
   placeSelf,
   marginX,
-  isOpened,
+  santaDay,
 }: SantaCardProps) {
   return (
     <DayCard
       day={day}
-      isOpened={isOpened}
+      santaDay={santaDay}
       x={x}
       y={y}
       marginY={marginY}

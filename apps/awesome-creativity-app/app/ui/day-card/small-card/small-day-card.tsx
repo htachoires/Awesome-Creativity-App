@@ -1,4 +1,5 @@
 import DayCard from '../day-card';
+import { SantaDay } from '../../../lib/santa-days/santa-day';
 
 export interface BigCardProps {
   day: number;
@@ -9,8 +10,8 @@ export interface BigCardProps {
   placeSelf?: string;
   delay?: number;
   alignSelf?: string;
-  isOpened: boolean;
   rotateDirection?: string;
+  santaDay: SantaDay,
 }
 
 export function SmallDayCard({
@@ -23,14 +24,14 @@ export function SmallDayCard({
   alignSelf,
   marginX,
   rotateDirection = 'left',
-  isOpened,
+  santaDay,
 }: BigCardProps) {
   return (
     <DayCard
+      santaDay={santaDay}
       day={day}
       x={x}
       y={y}
-      isOpened={isOpened}
       marginX={marginX}
       marginY={marginY}
       placeSelf={placeSelf}
