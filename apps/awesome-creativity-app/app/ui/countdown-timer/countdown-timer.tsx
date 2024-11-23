@@ -71,7 +71,14 @@ export default function CountdownTimer() {
         color: 'white',
       }}
     >
-      <div
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [3, -3, 0, 3] }} // Smooth up and down motion
+        transition={{
+          duration: 1, // Total time for one cycle (up and down)
+          repeat: Infinity, // Keep repeating
+          ease: "easeInOut" // Smooth transitions
+        }}
         style={{
           display: 'flex',
           justifyContent: 'center',
@@ -109,7 +116,7 @@ export default function CountdownTimer() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
