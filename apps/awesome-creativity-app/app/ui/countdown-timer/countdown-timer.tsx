@@ -89,6 +89,7 @@ export default function CountdownTimer() {
             padding: '0.5rem',
             backgroundColor: '#145A32',
             borderRadius: '87% 13% 89% 11% / 22% 73% 27% 78% ',
+            boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'
           }}
         >
           <div
