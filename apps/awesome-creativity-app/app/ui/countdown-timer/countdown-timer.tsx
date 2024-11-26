@@ -4,11 +4,14 @@ import { useEffect, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 
 export default function CountdownTimer() {
-  const targetDate = new Date('2024-12-01T00:00:00');
-  const [timeLeft, setTimeLeft] = useState(getFormattedTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState('none');
+  const [targetDate, setDate] = useState<Date | null>(null);
 
   useEffect(() => {
+    setDate(new Date('2024-12-01T00:00:00'));
+    getFormattedTimeLeft();
+
     const timer = setTimeout(() => setIsVisible('grid'), 3700);
     return () => clearTimeout(timer);
   }, []);
@@ -54,7 +57,7 @@ export default function CountdownTimer() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [getFormattedTimeLeft]);
+  }, [targetDate, getFormattedTimeLeft]);
 
   return (
     <motion.div
@@ -77,7 +80,7 @@ export default function CountdownTimer() {
         transition={{
           duration: 1, // Total time for one cycle (up and down)
           repeat: Infinity, // Keep repeating
-          ease: "easeInOut" // Smooth transitions
+          ease: 'easeInOut', // Smooth transitions
         }}
         style={{
           display: 'flex',
@@ -89,7 +92,7 @@ export default function CountdownTimer() {
             padding: '0.5rem',
             backgroundColor: '#145A32',
             borderRadius: '87% 13% 89% 11% / 22% 73% 27% 78% ',
-            boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px'
+            boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px',
           }}
         >
           <div
@@ -99,7 +102,7 @@ export default function CountdownTimer() {
               borderRadius: '87% 13% 89% 11% / 22% 73% 27% 78% ',
             }}
           >
-            {timeLeft.split('').map((char, index) => (
+            {timeLeft?.split('').map((char, index) => (
               <motion.span
                 key={`${char}-${index}`}
                 initial={{ opacity: 0, y: -10 }}
@@ -114,7 +117,18 @@ export default function CountdownTimer() {
               >
                 {char}
               </motion.span>
-            ))}
+            )) ?? (
+              <span
+                style={{
+                  display: 'inline-block',
+                  minWidth: '17px',
+                  letterSpacing: 7,
+                  fontFamily: 'Caveat Brush, cursive',
+                }}
+              >
+                0j00h00m00s
+              </span>
+            )}
           </div>
         </div>
       </motion.div>

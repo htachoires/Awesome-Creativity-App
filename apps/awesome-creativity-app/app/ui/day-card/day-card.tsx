@@ -70,7 +70,7 @@ export function DayCard({
     },
     opening: {
       scale: 1.1,
-      transition: { type: 'spring', duration: 2 },
+      transition: { type: 'spring', duration: 5 },
     },
     tryOpen: {
       scale: 0.95,
@@ -79,6 +79,10 @@ export function DayCard({
     hover: {
       scale: 1.05,
       rotate: rotateClick,
+    },
+    opened: {
+      scale: 1,
+      transition: { type: 'spring', duration: 2 },
     },
     notYet: {
       x: [0, -10, 10, -6, 6, -3, 3, 0],
@@ -91,13 +95,13 @@ export function DayCard({
 
   const variants: Variants = {
     opening: {
-      translateY: '100px',
-      scale: 0.3,
+      scale: 0,
       opacity: 0,
+      rotate: 180,
       transition: {
-        translateY: { type: 'spring', duration: 9 },
-        scale: { ease: 'easeOut', duration: 2 },
-        opacity: { ease: 'easeOut', duration: 8 },
+        scale: { ease: 'easeOut', duration: 5 },
+        opacity: { ease: 'easeOut', duration: 5 },
+        rotate: { ease: 'easeInOut', duration: 5 },
       },
     },
     opened: {
@@ -124,8 +128,8 @@ export function DayCard({
       alignSelf={alignSelf}
     >
       <motion.div
-        whileHover={canOpen() ? !isOpening() ? 'hover' : '' : ''}
-        whileTap={canOpen() ? !isOpening() ? 'tryOpen' : '' : ''}
+        whileHover={canOpen() ? (!isOpening() ? 'hover' : '') : ''}
+        whileTap={canOpen() ? (!isOpening() ? 'tryOpen' : '') : ''}
         onClick={() => {
           if (santaDay.isOpened) return;
 

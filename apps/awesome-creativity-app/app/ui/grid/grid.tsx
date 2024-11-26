@@ -99,7 +99,6 @@ export default function Grid({ santaDays }: GridProps) {
           <SmallDayCard
             y={30}
             x={1}
-            delay={0.4}
             marginY={100}
             placeSelf={'start'}
             alignSelf={'end'}
@@ -112,7 +111,6 @@ export default function Grid({ santaDays }: GridProps) {
             x={7}
             placeSelf={'end'}
             rotate={'3deg'}
-            delay={0.5}
             marginY={100}
             width={160}
             index={3}
