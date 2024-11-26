@@ -11,7 +11,7 @@ export interface BigCardProps {
   delay?: number;
   alignSelf?: string;
   rotateDirection?: string;
-  santaDay: SantaDay,
+  santaDay: SantaDay;
 }
 
 export function SmallDayCard({
@@ -42,7 +42,11 @@ export function SmallDayCard({
       rotateClick={'2deg'}
       borderBackground={'#145A32'}
       delay={delay}
-      borderRadius={rotateDirection == 'left' ? '91% 9% 88% 12% / 8% 89% 11% 92%' : '8% 89% 11% 92% / 91% 9% 88% 12%' }
+      borderRadius={
+        rotateDirection == 'left'
+          ? '91% 9% 88% 12% / 8% 89% 11% 92%'
+          : '8% 89% 11% 92% / 91% 9% 88% 12%'
+      }
     />
   );
 }

@@ -1,3 +1,5 @@
+'use server';
+
 import { sql } from '@vercel/postgres';
 
 import { SantaDay } from './santa-day';
@@ -16,9 +18,9 @@ export async function GetSantaDays(): Promise<SantaDay[]> {
   );
 }
 
-export async function CloseSantaDay(santaId: string): Promise<boolean> {
+export async function OpenSantaDay(santaId: string): Promise<boolean> {
   return await sql`UPDATE santa_day
-                   SET is_opened = false
+                   SET is_opened = true
                    WHERE id = ${santaId}`.then((x) => {
     return true;
   });

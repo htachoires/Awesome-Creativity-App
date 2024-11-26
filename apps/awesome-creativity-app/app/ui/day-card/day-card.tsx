@@ -5,6 +5,7 @@ import GridItem from '../grid-item/grid-item';
 import { motion, Variants } from 'framer-motion';
 import { useState } from 'react';
 import { SantaDay } from '../../lib/santa-days/santa-day';
+import { OpenSantaDay } from '../../lib/santa-days/santa-day-repository';
 
 export interface DayCardProps {
   day: number;
@@ -44,10 +45,30 @@ export function DayCard({
   marginX,
   fontSize,
 }: DayCardProps) {
-  const [currentVariant, setCurrentVariant] = useState('');
+  const date = new Date();
+
+  const canOpen = (): boolean => {
+    return (
+      !santaDay.isOpened &&
+      santaDay.day <= date.getDate() &&
+      date.getMonth() == 11
+    );
+  };
+
+  const [currentVariant, setCurrentVariant] = useState(
+    santaDay.isOpened ? 'opened' : canOpen() ? 'canOpen' : ''
+  );
 
   const variantsParents: Variants = {
-    open: {
+    canOpen: {
+      y: [3, -3, 0, 3],
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        ease: 'easeInOut',
+      },
+    },
+    opening: {
       scale: 1.1,
       transition: { type: 'spring', duration: 2 },
     },
@@ -59,10 +80,17 @@ export function DayCard({
       scale: 1.05,
       rotate: rotateClick,
     },
+    notYet: {
+      x: [0, -10, 10, -6, 6, -3, 3, 0],
+      transition: {
+        duration: 0.6,
+        ease: 'easeInOut',
+      },
+    },
   };
 
   const variants: Variants = {
-    open: {
+    opening: {
       translateY: '100px',
       scale: 0.3,
       opacity: 0,
@@ -72,6 +100,17 @@ export function DayCard({
         opacity: { ease: 'easeOut', duration: 8 },
       },
     },
+    opened: {
+      translateY: '100px',
+      opacity: 0,
+      transition: {
+        duration: 0,
+      },
+    },
+  };
+
+  const isOpening = () => {
+    return currentVariant == 'opening';
   };
 
   return (
@@ -85,11 +124,25 @@ export function DayCard({
       alignSelf={alignSelf}
     >
       <motion.div
-        whileHover={currentVariant != 'open' ? 'hover' : ''}
-        whileTap={currentVariant != 'open' ? 'tryOpen' : ''}
-        onMouseUp={(event) => {
-          setCurrentVariant('open');
-          //TODO send open to database
+        whileHover={canOpen() ? !isOpening() ? 'hover' : '' : ''}
+        whileTap={canOpen() ? !isOpening() ? 'tryOpen' : '' : ''}
+        onClick={() => {
+          if (santaDay.isOpened) return;
+
+          if (!canOpen()) {
+            setCurrentVariant('notYet');
+            return;
+          }
+
+          setCurrentVariant('opening');
+          OpenSantaDay(santaDay.id).then(() => {
+            santaDay.isOpened = true;
+          });
+        }}
+        onAnimationComplete={(x) => {
+          if (x == 'notYet') {
+            setCurrentVariant('');
+          }
         }}
         className={styles.dayCardContainer}
         animate={currentVariant}
@@ -108,13 +161,18 @@ export function DayCard({
             backgroundColor: color,
             borderRadius: borderRadius,
           }}
+          onAnimationComplete={(x) => {
+            if (x == 'opening') {
+              setCurrentVariant('opened');
+            }
+          }}
           variants={variants}
           animate={currentVariant}
         >
           <span style={{ fontSize: fontSize }} className={styles.dayCardText}>
             {day}
           </span>
-          <span>{santaDay.isOpened ? 'Ouvert' : 'Fermé'}</span>
+          {/*<span>{canOpen() ? 'Open me' : 'Not yet'}</span>*/}
         </motion.div>
       </motion.div>
     </GridItem>
