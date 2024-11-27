@@ -3,7 +3,7 @@
 import styles from './day-card.module.scss';
 import GridItem from '../grid-item/grid-item';
 import { motion, Variants } from 'framer-motion';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { SantaDay } from '../../lib/santa-days/santa-day';
 
 export interface DayCardProps {
@@ -46,9 +46,9 @@ export function DayCard({
   fontSize,
   openSantaDayAction,
 }: DayCardProps) {
-  const date = new Date();
-
   const canOpen = (): boolean => {
+    const date = new Date();
+
     return (
       !santaDay.isOpened &&
       santaDay.day <= date.getDate() &&
@@ -59,6 +59,23 @@ export function DayCard({
   const [currentVariant, setCurrentVariant] = useState(
     santaDay.isOpened ? 'opened' : canOpen() ? 'canOpen' : ''
   );
+
+  const isOpening = useCallback(
+    () => currentVariant == 'opening',
+    [currentVariant]
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (isOpening()) return;
+
+      setCurrentVariant(
+        santaDay.isOpened ? 'opened' : canOpen() ? 'canOpen' : ''
+      );
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [santaDay, isOpening, setCurrentVariant]);
 
   const variantsParents: Variants = {
     canOpen: {
@@ -103,19 +120,17 @@ export function DayCard({
         scale: { ease: 'easeOut', duration: 5 },
         opacity: { ease: 'easeOut', duration: 5 },
         rotate: { ease: 'easeInOut', duration: 5 },
+        ease: 'easeOut',
+        duration: 5,
       },
     },
     opened: {
-      translateY: '100px',
+      scale: 0,
       opacity: 0,
       transition: {
         duration: 0,
       },
     },
-  };
-
-  const isOpening = () => {
-    return currentVariant == 'opening';
   };
 
   return (
