@@ -24,16 +24,21 @@ export function GridItem({
   const cardVariants: Variants = {
     offscreen: {
       y: 250,
-      opacity: 0
+      opacity: 0,
+      scale: 0.3,
     },
     onscreen: {
       y: 0,
       opacity: 1,
+      scale: 1,
       transition: {
         type: 'spring',
         bounce: 0.4,
         duration: 0.8,
         delay: delay ?? 0,
+        scale: {
+          duration: 0.4
+        }
       },
     },
   };
