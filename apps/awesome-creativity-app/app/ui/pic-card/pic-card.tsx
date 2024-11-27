@@ -2,7 +2,9 @@
 
 import GridItem from '../grid-item/grid-item';
 import styles from './pic-card.module.scss';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
+import { SantaDay } from '../../lib/santa-days/santa-day';
+import { useEffect, useState } from 'react';
 
 export interface ImageCardProps {
   index: number;
@@ -15,6 +17,7 @@ export interface ImageCardProps {
   width: number;
   delay?: number;
   alignSelf?: string;
+  santaDay: SantaDay;
 }
 
 export function PicCard({
@@ -28,7 +31,53 @@ export function PicCard({
   delay,
   marginX,
   alignSelf,
+  santaDay,
 }: ImageCardProps) {
+  const [currentVariant, setCurrentVariant] = useState(
+    santaDay.isOpened ? 'opened' : 'hidden'
+  );
+
+  useEffect(() => {
+    setCurrentVariant(santaDay.isOpened ? 'opened' : 'hidden');
+  }, [santaDay.isOpened]);
+
+  const snowVariants: Variants = {
+    hidden: {
+      rotate: [0, 180, 360],
+      transition: {
+        duration: 5, // Adjust as needed
+        repeat: Infinity,
+        repeatDelay: 1,
+        ease: 'easeInOut',
+      },
+    },
+    opened: {
+      rotate: [0, 180, 360],
+      opacity: 0,
+      scale: 0,
+      transition: {
+        rotate: {
+          duration: 5, // Adjust as needed
+          repeat: Infinity,
+          repeatDelay: 1,
+          ease: 'easeInOut',
+        },
+        duration: 3,
+        ease: 'easeInOut',
+      },
+    },
+  };
+
+  const pictureVariants: Variants = {
+    hidden: {
+      filter: 'blur(30px)',
+    },
+    opened: {
+      filter: 'blur(0px)',
+      transition: { delay: 0.5, duration: 4 },
+    },
+  };
+
   return (
     <GridItem
       x={x}
@@ -39,11 +88,10 @@ export function PicCard({
       alignSelf={alignSelf}
     >
       <div style={{ rotate: rotate }} className={styles.imgContainer}>
-        <img
-          style={{
-            marginLeft: marginX,
-            filter: 'blur(30px)',
-          }}
+        <motion.img
+          style={{ marginLeft: marginX }}
+          animate={currentVariant}
+          variants={pictureVariants}
           className={styles['img-card']}
           src={`/img/us/pic-${index}.jpg`}
           alt="photo"
@@ -52,16 +100,10 @@ export function PicCard({
         <div className={styles.timerContainer}>
           <div>
             <motion.img
-              animate={{
-                rotate: [0, 180, 360], // Keyframes for rotation
-              }}
+              initial={!santaDay.isOpened}
+              animate={currentVariant}
+              variants={snowVariants}
               style={{ marginLeft: marginX }}
-              transition={{
-                duration: 5, // Adjust as needed
-                repeat: Infinity,
-                repeatDelay: 1,
-                ease: 'easeInOut',
-              }}
               src={'img/snowflake.png'}
               width={40}
               className={styles.lockedImg}

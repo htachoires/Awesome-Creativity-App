@@ -5,7 +5,6 @@ import GridItem from '../grid-item/grid-item';
 import { motion, Variants } from 'framer-motion';
 import { useState } from 'react';
 import { SantaDay } from '../../lib/santa-days/santa-day';
-import { OpenSantaDay } from '../../lib/santa-days/santa-day-repository';
 
 export interface DayCardProps {
   day: number;
@@ -25,6 +24,7 @@ export interface DayCardProps {
   alignSelf?: string | undefined;
   marginX?: number | undefined;
   fontSize?: string;
+  openSantaDayAction: (santaDay: SantaDay) => void;
 }
 
 export function DayCard({
@@ -44,6 +44,7 @@ export function DayCard({
   alignSelf,
   marginX,
   fontSize,
+  openSantaDayAction,
 }: DayCardProps) {
   const date = new Date();
 
@@ -139,9 +140,7 @@ export function DayCard({
           }
 
           setCurrentVariant('opening');
-          OpenSantaDay(santaDay.id).then(() => {
-            santaDay.isOpened = true;
-          });
+          openSantaDayAction(santaDay);
         }}
         onAnimationComplete={(x) => {
           if (x == 'notYet') {

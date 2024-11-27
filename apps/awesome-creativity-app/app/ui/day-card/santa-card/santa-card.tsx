@@ -9,6 +9,7 @@ export interface SantaCardProps {
   placeSelf?: string;
   marginX?: number;
   santaDay: SantaDay;
+  openSantaDayAction: (santaDay: SantaDay) => void;
 }
 
 export function SantaCard({
@@ -19,11 +20,13 @@ export function SantaCard({
   placeSelf,
   marginX,
   santaDay,
+  openSantaDayAction,
 }: SantaCardProps) {
   return (
     <DayCard
       day={day}
       santaDay={santaDay}
+      openSantaDayAction={openSantaDayAction}
       x={x}
       y={y}
       marginY={marginY}

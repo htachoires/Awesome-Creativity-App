@@ -12,6 +12,7 @@ export interface BigCardProps {
   alignSelf?: string;
   rotateDirection?: string;
   santaDay: SantaDay;
+  openSantaDay: (santaDay: SantaDay) => void;
 }
 
 export function SmallDayCard({
@@ -25,6 +26,7 @@ export function SmallDayCard({
   marginX,
   rotateDirection = 'left',
   santaDay,
+  openSantaDay,
 }: BigCardProps) {
   return (
     <DayCard
@@ -39,6 +41,7 @@ export function SmallDayCard({
       height={100}
       width={100}
       color={'#922B21'}
+      openSantaDayAction={openSantaDay}
       rotateClick={'2deg'}
       borderBackground={'#145A32'}
       delay={delay}

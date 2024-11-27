@@ -13,7 +13,7 @@ export default async function Index() {
         <div className={styles.container}>
           <Title />
           <CountdownTimer />
-          <Grid santaDays={santaDays} />
+          <Grid santaDaysInput={santaDays} />
         </div>
       </div>
     </div>

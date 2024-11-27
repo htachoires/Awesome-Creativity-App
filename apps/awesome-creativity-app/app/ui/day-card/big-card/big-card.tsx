@@ -9,6 +9,7 @@ export interface BigCardProps {
   placeSelf?: string;
   delay?: number;
   santaDay: SantaDay;
+  openSantaDayAction: (santaDay: SantaDay) => void;
 }
 
 export function BigCard({
@@ -19,11 +20,13 @@ export function BigCard({
   placeSelf,
   delay,
   santaDay,
+  openSantaDayAction,
 }: BigCardProps) {
   return (
     <DayCard
       day={day}
       santaDay={santaDay}
+      openSantaDayAction={openSantaDayAction}
       x={x}
       y={y}
       delay={delay}
