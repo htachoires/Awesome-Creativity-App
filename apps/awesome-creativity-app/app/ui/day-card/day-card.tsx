@@ -190,7 +190,6 @@ export function DayCard({
           <span style={{ fontSize: fontSize }} className={styles.dayCardText}>
             {day}
           </span>
-          {/*<span>{canOpen() ? 'Open me' : 'Not yet'}</span>*/}
         </motion.div>
       </motion.div>
     </GridItem>

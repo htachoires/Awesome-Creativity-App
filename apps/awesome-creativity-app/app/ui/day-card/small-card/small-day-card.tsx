@@ -12,6 +12,8 @@ export interface BigCardProps {
   alignSelf?: string;
   rotateDirection?: string;
   santaDay: SantaDay;
+  fontSize?: string;
+  size?: number;
   openSantaDay: (santaDay: SantaDay) => void;
 }
 
@@ -26,6 +28,8 @@ export function SmallDayCard({
   marginX,
   rotateDirection = 'left',
   santaDay,
+  size,
+  fontSize,
   openSantaDay,
 }: BigCardProps) {
   return (
@@ -38,8 +42,9 @@ export function SmallDayCard({
       marginY={marginY}
       placeSelf={placeSelf}
       alignSelf={alignSelf}
-      height={100}
-      width={100}
+      fontSize={fontSize}
+      height={size ?? 100}
+      width={size ?? 100}
       color={'#922B21'}
       openSantaDayAction={openSantaDay}
       rotateClick={'2deg'}

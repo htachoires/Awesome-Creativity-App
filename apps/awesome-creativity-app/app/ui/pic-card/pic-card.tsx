@@ -16,6 +16,7 @@ export interface ImageCardProps {
   rotate?: string;
   width: number;
   delay?: number;
+  fogDelay?: number;
   alignSelf?: string;
   santaDay: SantaDay;
 }
@@ -30,6 +31,7 @@ export function PicCard({
   width,
   delay,
   marginX,
+  fogDelay,
   alignSelf,
   santaDay,
 }: ImageCardProps) {
@@ -74,7 +76,7 @@ export function PicCard({
     },
     opened: {
       filter: 'blur(0px)',
-      transition: { delay: 0.5, duration: 4 },
+      transition: { delay: (fogDelay ?? 0) + 0.5, duration: 4 },
     },
   };
 
@@ -84,10 +86,11 @@ export function PicCard({
       delay={delay}
       y={y}
       marginY={marginY}
+      marginX={marginX}
       placeSelf={placeSelf}
       alignSelf={alignSelf}
     >
-      <div style={{ rotate: rotate }} className={styles.imgContainer}>
+      <div style={{ rotate: rotate, zIndex: -1 }} className={styles.imgContainer}>
         <motion.img
           style={{ marginLeft: marginX }}
           animate={currentVariant}
