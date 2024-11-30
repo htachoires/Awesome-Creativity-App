@@ -70,10 +70,11 @@ export function DayCard({
   const canOpen = (): boolean => {
     const date = new Date();
 
-    return true;
-    // !santaDay.isOpened &&
-    // santaDay.day <= date.getDate() &&
-    // date.getMonth() == 11
+    return (
+      !santaDay.isOpened &&
+      santaDay.day <= date.getDate() &&
+      date.getMonth() == 11
+    );
   };
 
   const [currentVariant, setCurrentVariant] = useState(
