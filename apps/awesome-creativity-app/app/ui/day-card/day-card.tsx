@@ -5,6 +5,7 @@ import GridItem from '../grid-item/grid-item';
 import { motion, Variants } from 'framer-motion';
 import { useCallback, useEffect, useState } from 'react';
 import { SantaDay } from '../../lib/santa-days/santa-day';
+import SantaModal from '../santa-modal/santa-modal';
 
 export interface DayCardProps {
   day: number;
@@ -25,6 +26,7 @@ export interface DayCardProps {
   marginX?: number | undefined;
   fontSize?: string;
   openSantaDayAction: (santaDay: SantaDay) => void;
+  modalContent?: JSX.Element | undefined;
 }
 
 export function DayCard({
@@ -45,15 +47,33 @@ export function DayCard({
   marginX,
   fontSize,
   openSantaDayAction,
+  modalContent,
 }: DayCardProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  //prevent from scrolling
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isModalOpen]);
+
   const canOpen = (): boolean => {
     const date = new Date();
 
-    return (
-      !santaDay.isOpened &&
-      santaDay.day <= date.getDate() &&
-      date.getMonth() == 11
-    );
+    return true;
+    // !santaDay.isOpened &&
+    // santaDay.day <= date.getDate() &&
+    // date.getMonth() == 11
   };
 
   const [currentVariant, setCurrentVariant] = useState(
@@ -147,13 +167,15 @@ export function DayCard({
         whileHover={canOpen() ? (!isOpening() ? 'hover' : '') : ''}
         whileTap={canOpen() ? (!isOpening() ? 'tryOpen' : '') : ''}
         onClick={() => {
-          if (santaDay.isOpened) return;
+          if (santaDay.isOpened) {
+            openModal();
+            return;
+          }
 
           if (!canOpen()) {
             setCurrentVariant('notYet');
             return;
           }
-
           setCurrentVariant('opening');
           openSantaDayAction(santaDay);
         }}
@@ -182,6 +204,7 @@ export function DayCard({
           onAnimationComplete={(x) => {
             if (x == 'opening') {
               setCurrentVariant('opened');
+              openModal();
             }
           }}
           variants={variants}
@@ -192,6 +215,11 @@ export function DayCard({
           </span>
         </motion.div>
       </motion.div>
+      {isModalOpen && (
+        <SantaModal day={santaDay.day} onClose={closeModal}>
+          {modalContent}
+        </SantaModal>
+      )}
     </GridItem>
   );
 }

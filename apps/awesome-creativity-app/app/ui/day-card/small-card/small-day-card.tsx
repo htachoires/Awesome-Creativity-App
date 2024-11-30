@@ -15,6 +15,7 @@ export interface BigCardProps {
   fontSize?: string;
   size?: number;
   openSantaDay: (santaDay: SantaDay) => void;
+  modalContent?: JSX.Element;
 }
 
 export function SmallDayCard({
@@ -31,6 +32,7 @@ export function SmallDayCard({
   size,
   fontSize,
   openSantaDay,
+  modalContent,
 }: BigCardProps) {
   return (
     <DayCard
@@ -44,6 +46,7 @@ export function SmallDayCard({
       alignSelf={alignSelf}
       fontSize={fontSize}
       height={size ?? 100}
+      modalContent={modalContent}
       width={size ?? 100}
       color={'var(--secondary)'}
       borderBackground={'var(--terciary)'}

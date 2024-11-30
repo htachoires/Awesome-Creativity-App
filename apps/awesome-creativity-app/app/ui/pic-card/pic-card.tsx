@@ -106,10 +106,9 @@ export function PicCard({
               initial={!santaDay.isOpened}
               animate={currentVariant}
               variants={snowVariants}
-              style={{ marginLeft: marginX }}
               src={'img/snowflake.png'}
               width={40}
-              className={styles.lockedImg}
+              className={styles.snowflake}
             />
           </div>
         </div>

@@ -1,0 +1,20 @@
+.textContainer {
+  > img, p {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+}
+
+.letterImage {
+  width: 95%;
+  margin: auto;
+  display: block;
+  height: auto;
+  border-radius: 10px;
+}
+
+.sign {
+  text-align: end;
+  display: block;
+  margin-top: 0.8rem;
+}
