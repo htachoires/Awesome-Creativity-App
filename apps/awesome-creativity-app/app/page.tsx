@@ -1,4 +1,4 @@
-import styles from './page.module.scss';
+import styles from './page.module.css';
 import Title from './ui/title/title';
 import Grid from './ui/grid/grid';
 import { GetSantaDays } from './lib/santa-days/santa-day-repository';

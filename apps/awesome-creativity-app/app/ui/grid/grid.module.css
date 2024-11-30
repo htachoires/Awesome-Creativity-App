@@ -1,4 +1,4 @@
-.grid-container {
+.gridContainer {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
@@ -6,5 +6,5 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(7, min(12vw, 50px));
+  grid-template-columns: repeat(7, calc(calc(var(--max-width) - 40px) / 7));
 }

@@ -35,17 +35,14 @@ export default function Grid({ santaDaysInput }: GridProps) {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible('grid'), 4700);
+    const timer = setTimeout(() => setIsVisible('block'), 4700);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div>
-      <motion.div
-        style={{ display: isVisible }}
-        className={styles['grid-container']}
-      >
-        <div className={styles['grid']}>
+    <div style={{ display: isVisible }}>
+      <motion.div className={styles.gridContainer}>
+        <div className={styles.grid}>
           <SmallDayCard
             y={10}
             x={1}

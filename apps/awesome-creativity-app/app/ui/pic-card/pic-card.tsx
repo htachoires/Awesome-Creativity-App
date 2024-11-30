@@ -1,7 +1,7 @@
 'use client';
 
 import GridItem from '../grid-item/grid-item';
-import styles from './pic-card.module.scss';
+import styles from './pic-card.module.css';
 import { motion, Variants } from 'framer-motion';
 import { SantaDay } from '../../lib/santa-days/santa-day';
 import { useEffect, useState } from 'react';

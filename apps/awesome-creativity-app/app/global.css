@@ -11,6 +11,7 @@
   --secondary: hsl(5.31, 63.13%, 35.1%);
   --terciary: hsl(145.71, 63.64%, 21.57%);
   --quarterly: hsl(48.07, 89.16%, 60.2%);
+  --max-width: 393px;
 }
 
 html, body, div, span, applet, object, iframe,

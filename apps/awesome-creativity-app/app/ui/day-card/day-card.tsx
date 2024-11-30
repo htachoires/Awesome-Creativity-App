@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './day-card.module.scss';
+import styles from './day-card.module.css';
 import GridItem from '../grid-item/grid-item';
 import { motion, Variants } from 'framer-motion';
 import { useCallback, useEffect, useState } from 'react';

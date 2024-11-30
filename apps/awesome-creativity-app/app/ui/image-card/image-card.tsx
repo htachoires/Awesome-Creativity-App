@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './image-card.module.scss';
+import styles from './image-card.module.css';
 import GridItem from '../grid-item/grid-item';
 
 /* eslint-disable-next-line */
