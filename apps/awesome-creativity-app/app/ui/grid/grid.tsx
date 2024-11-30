@@ -58,6 +58,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
           <PicCard
             y={10}
             x={7}
+            alignSelf={'start'}
             placeSelf={'end'}
             delay={0.15}
             rotate={'3deg'}
@@ -65,11 +66,31 @@ export default function Grid({ santaDaysInput }: GridProps) {
             index={1}
             santaDay={santaDays[0]}
           />
+          <ImageCard
+            uri={'/img/lights.png'}
+            y={10}
+            x={4}
+            marginY={100}
+            marginX={-30}
+            delay={0.2}
+            rotate={'-50deg'}
+            width={80}
+          />
+          <ImageCard
+            uri={'/img/bauble-3.png'}
+            y={10}
+            x={6}
+            marginY={140}
+            marginX={25}
+            delay={0.25}
+            rotate={'-10deg'}
+            width={60}
+          />
           <SmallDayCard
             y={20}
             x={7}
             placeSelf={'end'}
-            marginY={100}
+            marginY={0}
             delay={0.2}
             day={2}
             santaDay={santaDays[1]}
@@ -79,22 +100,13 @@ export default function Grid({ santaDaysInput }: GridProps) {
             y={20}
             x={1}
             delay={0.3}
-            marginY={100}
+            marginY={0}
             rotate={'3deg'}
             placeSelf={'start'}
             width={170}
             index={2}
             santaDay={santaDays[1]}
           />
-          {/*<ImageCard*/}
-          {/*  uri={'/img/bauble-1.png'}*/}
-          {/*  y={30}*/}
-          {/*  x={6}*/}
-          {/*  marginY={100}
-          {/*  delay={0.5}*/}
-          {/*  rotate={'-3deg'}*/}
-          {/*  placeSelf={'start'}*/}
-          {/*  width={100}*/}
           <SmallDayCard
             y={30}
             x={1}
@@ -116,6 +128,15 @@ export default function Grid({ santaDaysInput }: GridProps) {
             index={3}
             santaDay={santaDays[2]}
           />
+          <ImageCard
+            uri={'/img/sock.png'}
+            y={30}
+            x={1}
+            marginX={25}
+            marginY={55}
+            rotate={'-10deg'}
+            width={100}
+          />
           <SmallDayCard
             y={40}
             x={7}
@@ -125,6 +146,15 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={4}
             santaDay={santaDays[3]}
             openSantaDay={openSantaDayAction}
+          />
+          <ImageCard
+            uri={'/img/giftbox.png'}
+            y={40}
+            x={5}
+            marginX={25}
+            marginY={55}
+            rotate={'-10deg'}
+            width={100}
           />
           <PicCard
             y={40}
