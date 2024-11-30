@@ -35,8 +35,8 @@ export function SantaCard({
       width={200}
       rotateClick={'-2deg'}
       marginX={marginX}
-      color={'#F4D03F'}
-      borderBackground={'#145A32'}
+      color={'var(--quarterly)'}
+      borderBackground={'var(--terciary)'}
       borderRadius={'27% 73% 29% 71% / 72% 26% 74% 28% '}
       fontSize={'5rem'}
     />

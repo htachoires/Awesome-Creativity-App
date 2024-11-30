@@ -45,10 +45,10 @@ export function SmallDayCard({
       fontSize={fontSize}
       height={size ?? 100}
       width={size ?? 100}
-      color={'#922B21'}
+      color={'var(--secondary)'}
+      borderBackground={'var(--terciary)'}
       openSantaDayAction={openSantaDay}
       rotateClick={'2deg'}
-      borderBackground={'#145A32'}
       delay={delay}
       borderRadius={
         rotateDirection == 'left'

@@ -34,9 +34,9 @@ export function BigCard({
       placeSelf={placeSelf}
       height={130}
       width={170}
-      color={'#F4D03F'}
+      color={'var(--quarterly)'}
       rotateClick={'-2deg'}
-      borderBackground={'#145A32'}
+      borderBackground={'var(--terciary)'}
       fontSize={'4rem'}
       borderRadius={'16% 84% 16% 84% / 81% 12% 88% 19%'}
     />

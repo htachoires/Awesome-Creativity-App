@@ -90,14 +90,14 @@ export default function CountdownTimer() {
         <div
           style={{
             padding: '0.5rem',
-            backgroundColor: '#145A32',
+            backgroundColor: 'var(--terciary)',
             borderRadius: '87% 13% 89% 11% / 22% 73% 27% 78% ',
             boxShadow: 'rgba(0, 0, 0, 0.15) 0px 5px 15px 0px',
           }}
         >
           <div
             style={{
-              backgroundColor: '#922B21',
+              backgroundColor: 'var(--secondary)',
               padding: '1rem',
               borderRadius: '87% 13% 89% 11% / 22% 73% 27% 78% ',
             }}
