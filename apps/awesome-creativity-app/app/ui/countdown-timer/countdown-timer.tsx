@@ -98,6 +98,7 @@ export default function CountdownTimer() {
           <div
             style={{
               backgroundColor: 'var(--secondary)',
+              color: 'var(--font-secondary)',
               padding: '1rem',
               borderRadius: '87% 13% 89% 11% / 22% 73% 27% 78% ',
             }}
