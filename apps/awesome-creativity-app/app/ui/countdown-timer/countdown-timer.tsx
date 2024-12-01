@@ -12,7 +12,7 @@ export default function CountdownTimer() {
     setDate(new Date('2024-12-01T00:00:00'));
     getFormattedTimeLeft();
 
-    const timer = setTimeout(() => setIsVisible('grid'), 0);
+    const timer = setTimeout(() => setIsVisible('grid'), 3700);
     return () => clearTimeout(timer);
   }, []);
 
