@@ -34,9 +34,9 @@ export default function ModalDay2() {
         alt="candy"
       />
       <span className={styles.gps}>
-        44.838139333941555,
+        44.83695756320381,
         <br />
-        -0.5874145684930858
+        -0.5878236377992534
       </span>
       <img className={styles.lightLeft} src="/img/lights-left.png" alt="lights" />
       <img className={styles.lightRight} src="/img/lights-right.png" alt="lights" />
