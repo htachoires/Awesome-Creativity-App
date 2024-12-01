@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 import { SantaDay } from '../../lib/santa-days/santa-day';
 import { OpenSantaDay } from '../../lib/santa-days/santa-day-repository';
 import ModalDay1 from '../santa-modal/santa-modal-day-1/santa-modal-day-1';
+import ModalDay2 from '../santa-modal/santa-modal-day-2/santa-modal-day-2';
 
 export interface GridProps {
   santaDaysInput: SantaDay[];
@@ -53,6 +54,8 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={1}
             santaDay={santaDays[0]}
             openSantaDay={openSantaDayAction}
+            headerImg={"/img/bauble-2.png"}
+            marginLeftModalHeaderTitle={-10}
             modalContent={<ModalDay1 />}
           />
           <PicCard
@@ -95,6 +98,9 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={2}
             santaDay={santaDays[1]}
             openSantaDay={openSantaDayAction}
+            headerImg={"/img/bauble-3.png"}
+            marginLeftModalHeaderTitle={0}
+            modalContent={<ModalDay2 />}
           />
           <PicCard
             y={20}

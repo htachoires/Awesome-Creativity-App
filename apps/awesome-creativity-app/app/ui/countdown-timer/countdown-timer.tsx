@@ -36,7 +36,7 @@ export default function CountdownTimer() {
     }
   }
 
-  const cardVariants: Variants = {
+  const containerVariants: Variants = {
     offscreen: {
       y: 250,
       opacity: 0,
@@ -64,7 +64,7 @@ export default function CountdownTimer() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
-      variants={cardVariants}
+      variants={containerVariants}
       style={{
         display: isVisible,
         textAlign: 'center',
@@ -75,13 +75,6 @@ export default function CountdownTimer() {
       }}
     >
       <motion.div
-        initial={{ y: 0 }}
-        animate={{ y: [3, -3, 0, 3] }} // Smooth up and down motion
-        transition={{
-          duration: 1, // Total time for one cycle (up and down)
-          repeat: Infinity, // Keep repeating
-          ease: 'easeInOut', // Smooth transitions
-        }}
         style={{
           display: 'flex',
           justifyContent: 'center',

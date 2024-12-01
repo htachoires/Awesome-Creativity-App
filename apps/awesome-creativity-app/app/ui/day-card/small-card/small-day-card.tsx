@@ -14,8 +14,10 @@ export interface BigCardProps {
   santaDay: SantaDay;
   fontSize?: string;
   size?: number;
+  headerImg?: string;
   openSantaDay: (santaDay: SantaDay) => void;
   modalContent?: JSX.Element;
+  marginLeftModalHeaderTitle?: number;
 }
 
 export function SmallDayCard({
@@ -33,6 +35,8 @@ export function SmallDayCard({
   fontSize,
   openSantaDay,
   modalContent,
+  headerImg,
+  marginLeftModalHeaderTitle,
 }: BigCardProps) {
   return (
     <DayCard
@@ -53,6 +57,8 @@ export function SmallDayCard({
       openSantaDayAction={openSantaDay}
       rotateClick={'2deg'}
       delay={delay}
+      marginLeftModalHeaderTitle={marginLeftModalHeaderTitle}
+      headerImg={headerImg}
       borderRadius={
         rotateDirection == 'left'
           ? '91% 9% 88% 12% / 8% 89% 11% 92%'

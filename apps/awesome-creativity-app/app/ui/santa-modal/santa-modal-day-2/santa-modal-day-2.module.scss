@@ -1,0 +1,72 @@
+.textContainer {
+  display: grid;
+  grid-template-columns: repeat(5, calc(314px / 5));
+}
+
+.title {
+  display: block;
+  font-size: 1.35rem;
+  text-wrap: nowrap;
+  place-self: center;
+  grid-column: 3;
+  margin-top: 2rem;
+  grid-row: 1;
+}
+
+.description {
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  text-wrap: nowrap;
+  place-self: center;
+  grid-column: 3;
+  grid-row: 2;
+  opacity: 0.8;
+}
+
+.candyCaneLeft, .candyCaneRight {
+  grid-row: 3;
+  margin-top: 2rem;
+  grid-column: 3;
+  width: 70px;
+  opacity: 0.6;
+  place-self: center;
+}
+
+.candyCaneLeft {
+  margin-left: -80px;
+}
+
+.candyCaneRight {
+  margin-left: 80px;
+}
+
+.gps {
+  margin-top: 3rem;
+  grid-column: 3;
+  place-self: center;
+  text-align: center;
+  grid-row: 4;
+  font-size: 2rem;
+  opacity: 0.6;
+}
+
+.lightLeft, .lightRight {
+  margin-top: 2rem;
+  width: 50px;
+  grid-row: 5;
+}
+
+.lightRight {
+  place-self: end;
+  grid-column: 4;
+  rotate: 60deg;
+  margin-right: -15px;
+}
+
+.lightLeft {
+  place-self: start;
+  grid-column: 2;
+  margin-left: -15px;
+  rotate: -60deg;
+}

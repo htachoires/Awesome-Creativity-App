@@ -27,6 +27,8 @@ export interface DayCardProps {
   fontSize?: string;
   openSantaDayAction: (santaDay: SantaDay) => void;
   modalContent?: JSX.Element | undefined;
+  headerImg?: string;
+  marginLeftModalHeaderTitle?: number | undefined;
 }
 
 export function DayCard({
@@ -48,6 +50,8 @@ export function DayCard({
   fontSize,
   openSantaDayAction,
   modalContent,
+  headerImg,
+  marginLeftModalHeaderTitle,
 }: DayCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -217,7 +221,12 @@ export function DayCard({
         </motion.div>
       </motion.div>
       {isModalOpen && (
-        <SantaModal day={santaDay.day} onClose={closeModal}>
+        <SantaModal
+          marginLeftModalHeaderTitle={marginLeftModalHeaderTitle}
+          day={santaDay.day}
+          onClose={closeModal}
+          headerImg={headerImg}
+        >
           {modalContent}
         </SantaModal>
       )}

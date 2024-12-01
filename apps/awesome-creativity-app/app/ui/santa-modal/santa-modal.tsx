@@ -6,9 +6,17 @@ export interface ModalProps {
   onClose: () => void;
   children?: any;
   day?: number;
+  headerImg?: string;
+  marginLeftModalHeaderTitle?: number;
 }
 
-export default function SantaModal({ onClose, children, day }: ModalProps) {
+export default function SantaModal({
+  onClose,
+  children,
+  day,
+  marginLeftModalHeaderTitle,
+  headerImg,
+}: ModalProps) {
   function getOrdinal() {
     return day == 1 ? 'er' : 'ème';
   }
@@ -68,7 +76,13 @@ export default function SantaModal({ onClose, children, day }: ModalProps) {
                 <span className={styles.ordinal}>{getOrdinal()} </span>
                 Jour de l&#39;avent
               </span>
-              <img className={styles.bauble} src="/img/bauble-2.png" alt="bauble" width={'55'} />
+              <img
+                className={styles.bauble}
+                style={{ marginLeft: marginLeftModalHeaderTitle }}
+                src={headerImg ?? '/img/bauble-2.png'}
+                alt="bauble"
+                width={'55'}
+              />
               <div className={styles.modalExitContainer} onClick={onClose}>
                 <span className={styles.modalExit}>x</span>
               </div>
