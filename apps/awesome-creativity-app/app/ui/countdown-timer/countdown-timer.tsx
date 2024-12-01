@@ -12,7 +12,7 @@ export default function CountdownTimer() {
     setDate(new Date('2024-12-01T00:00:00'));
     getFormattedTimeLeft();
 
-    const timer = setTimeout(() => setIsVisible('grid'), 3700);
+    const timer = setTimeout(() => setIsVisible('grid'), 0);
     return () => clearTimeout(timer);
   }, []);
 
@@ -32,7 +32,7 @@ export default function CountdownTimer() {
         minutes
       ).padStart(2, '0')}m${String(seconds).padStart(2, '0')}s`;
     } else {
-      return '0j00h00:00';
+      return `${now.getDate()} décembre 2024`;
     }
   }
 
@@ -105,7 +105,7 @@ export default function CountdownTimer() {
                 transition={{ duration: 0.3 }}
                 style={{
                   display: 'inline-block',
-                  minWidth: '17px',
+                  minWidth: '10px',
                   fontFamily: 'Caveat Brush, cursive',
                 }}
               >
@@ -115,12 +115,11 @@ export default function CountdownTimer() {
               <span
                 style={{
                   display: 'inline-block',
-                  minWidth: '17px',
-                  letterSpacing: 7,
+                  minWidth: '10px',
                   fontFamily: 'Caveat Brush, cursive',
                 }}
               >
-                0j00h00m00s
+                X décembre 2024
               </span>
             )}
           </div>
