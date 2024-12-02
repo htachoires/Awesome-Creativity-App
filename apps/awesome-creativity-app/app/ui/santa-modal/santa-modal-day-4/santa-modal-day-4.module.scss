@@ -1,0 +1,66 @@
+.title {
+  display: block;
+  font-size: 1.35rem;
+  place-self: center;
+  grid-column: 3;
+  margin-top: 1rem;
+  grid-row: 1;
+  opacity: 0.9;
+}
+
+.logoContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.logoImg {
+  border-radius: 10px;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.gridImgContainer {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 0.5rem;
+  row-gap: 1rem;
+}
+
+.restaurantImg, .gridImg {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.restaurantImg {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.descriptionContainer {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.downloadContainer {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--font-secondary);
+
+}
+
+.link:link, .link:visited {
+  text-decoration: none;
+}
