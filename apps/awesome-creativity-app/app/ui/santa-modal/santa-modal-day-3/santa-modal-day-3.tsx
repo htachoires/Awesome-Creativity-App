@@ -15,12 +15,15 @@ export default function ModalDay3() {
           alt="massage"
         />
       </div>
-      <div className={styles.descrptionContainer}>
+      <div className={styles.downloadContainer}>
+        <a href="/img/modal/3/massage.jpg" className={styles.link} download>
+          J&apos;enregistre mon bon 💾
+        </a>
+      </div>
+      <div className={styles.descriptionContainer}>
         <span>
-          Pour être activé, ce bon devra être
-          <br /> présenté à ton Youyou et est valide
-          <br />
-          qu&apos;une seule fois 😉
+          Attention ! Pour être activé, ce bon devra être présenté à ton Youyou
+          et est valide qu&apos;une seule fois 😉
         </span>
       </div>
     </div>
