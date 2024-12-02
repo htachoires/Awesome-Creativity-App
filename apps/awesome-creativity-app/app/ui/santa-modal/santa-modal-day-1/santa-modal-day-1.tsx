@@ -29,7 +29,7 @@ export default function ModalDay1() {
         notre premier baiser le 11 août 2024 sur la plage du Porge.
       </p>
       <img
-        src="/img/us/pic-33.jpg"
+        src="/img/modal/1/letter-picture.jpg"
         alt="le porge"
         className={styles.letterImage}
       />

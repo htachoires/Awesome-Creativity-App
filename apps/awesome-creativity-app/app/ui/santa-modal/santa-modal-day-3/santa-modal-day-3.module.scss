@@ -1,0 +1,28 @@
+.titleContainer {
+  text-align: center;
+}
+
+.title {
+  display: block;
+  font-size: 1.35rem;
+  place-self: center;
+  grid-column: 3;
+  margin-top: 2rem;
+  grid-row: 1;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.massageImg {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.descrptionContainer {
+  text-align: center;
+  margin-top: 1rem;
+}

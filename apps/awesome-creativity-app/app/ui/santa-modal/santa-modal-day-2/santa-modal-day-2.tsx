@@ -18,19 +18,21 @@ export default function ModalDay2() {
       <span className={styles.title}>
         Seras-tu aussi forte qu&apos;au Puissance 4 ?
       </span>
-      <span className={styles.description}>Parce que je t&apos;invite ici 🤫</span>
+      <span className={styles.description}>
+        Parce que je t&apos;invite ici 🤫
+      </span>
       <motion.img
         animate={'move'}
         variants={variant}
         className={styles.candyCaneLeft}
-        src="/img/candy-cane-left.png"
+        src="/img/modal/2/candy-cane-left.png"
         alt="candy"
       />
       <motion.img
         animate={'move'}
         variants={variant}
         className={styles.candyCaneRight}
-        src="/img/candy-cane-right.png"
+        src="/img/modal/2/candy-cane-right.png"
         alt="candy"
       />
       <span className={styles.gps}>
@@ -38,8 +40,16 @@ export default function ModalDay2() {
         <br />
         -0.5878236377992534
       </span>
-      <img className={styles.lightLeft} src="/img/lights-left.png" alt="lights" />
-      <img className={styles.lightRight} src="/img/lights-right.png" alt="lights" />
+      <img
+        className={styles.lightLeft}
+        src="/img/modal/2/lights-left.png"
+        alt="lights"
+      />
+      <img
+        className={styles.lightRight}
+        src="/img/modal/2/lights-right.png"
+        alt="lights"
+      />
     </div>
   );
 }
