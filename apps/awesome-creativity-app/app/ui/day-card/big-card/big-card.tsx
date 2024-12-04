@@ -10,6 +10,8 @@ export interface BigCardProps {
   delay?: number;
   santaDay: SantaDay;
   openSantaDayAction: (santaDay: SantaDay) => void;
+  modalContent?: JSX.Element;
+  headerImg?: string;
 }
 
 export function BigCard({
@@ -21,6 +23,8 @@ export function BigCard({
   delay,
   santaDay,
   openSantaDayAction,
+  modalContent,
+  headerImg,
 }: BigCardProps) {
   return (
     <DayCard
@@ -32,6 +36,8 @@ export function BigCard({
       delay={delay}
       marginY={marginY}
       placeSelf={placeSelf}
+      modalContent={modalContent}
+      headerImg={headerImg}
       height={130}
       width={170}
       color={'var(--quarterly)'}
