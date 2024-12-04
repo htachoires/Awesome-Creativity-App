@@ -16,6 +16,7 @@ import ModalDay3 from '../santa-modal/santa-modal-day-3/santa-modal-day-3';
 import ModalDay4 from '../santa-modal/santa-modal-day-4/santa-modal-day-4';
 import ModalDay5 from '../santa-modal/santa-modal-day-5/santa-modal-day-5';
 import ModalDay6 from '../santa-modal/santa-modal-day-6/santa-modal-day-6';
+import ModalDay7 from '../santa-modal/santa-modal-day-7/santa-modal-day-7';
 
 export interface GridProps {
   santaDaysInput: SantaDay[];
@@ -248,6 +249,8 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={7}
             santaDay={santaDays[6]}
             openSantaDay={openSantaDayAction}
+            headerImg={'/img/bauble-12.png'}
+            modalContent={<ModalDay7 />}
           />
           <PicCard
             y={70}
