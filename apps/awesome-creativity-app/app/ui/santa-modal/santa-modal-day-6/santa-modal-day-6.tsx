@@ -9,7 +9,7 @@ export default function ModalDay6() {
         </span>
       </div>
       <div className={styles.numberContainer}>
-        <span>2?-07</span>
+        <span>2?07</span>
       </div>
       <div className={styles.descriptionContainer}>
         <span className={styles.description}>
