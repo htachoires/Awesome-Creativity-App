@@ -349,6 +349,8 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={10}
             santaDay={santaDays[9]}
             openSantaDayAction={openSantaDayAction}
+            headerImg={'/img/bauble-10.png'}
+            modalContent={<ModalDay10 />}
           />
           <PicCard
             y={109}
