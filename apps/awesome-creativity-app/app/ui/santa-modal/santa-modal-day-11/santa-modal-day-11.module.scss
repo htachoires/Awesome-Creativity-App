@@ -1,34 +1,100 @@
-.titleContainer {
+.title {
   text-align: center;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  opacity: 1;
 }
 
-.title {
-  display: block;
-  place-self: center;
-  grid-column: 3;
-  margin-top: 2rem;
-  grid-row: 1;
-  font-size: 1.5rem;
+.descriptionActivity {
+  margin-top: 1rem;
+  font-size: 1rem;
   opacity: 0.8;
 }
 
-.planImgContainer {
+.listContainer {
+  margin-top: 1rem;
+
+  .description {
+    opacity: 0.8;
+  }
+}
+
+.filmContainer {
+  margin-top: 2rem;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.filmDate {
+  display: block;
+  font-size: 1rem;
+  opacity: 0.8;
+  text-align: right;
+}
+
+.filmTitle {
+  font-size: 1.25rem;
+  margin-top: 0.1rem;
+  display: inline-block;
+}
+
+
+.imgContainer {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
-.planImg {
-  width: 300px;
+.gridImgContainer {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 0.5rem;
+  row-gap: 1rem;
 }
 
-.hintContainer {
-  text-align: center;
-  opacity: 0.8;
-  margin-top: 2.3rem;
+.restaurantImg, .gridImg {
+  width: 100%;
+  border-radius: 10px;
 }
 
-.description {
-  text-align: center;
+.restaurantImg {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.hint {
   font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.harryPotter {
+  width: 80%;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.downloadContainer {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--font-secondary);
+
+}
+
+.link:link, .link:visited {
+  text-decoration: none;
 }
