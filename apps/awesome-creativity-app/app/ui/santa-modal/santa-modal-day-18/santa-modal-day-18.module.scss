@@ -1,0 +1,34 @@
+.titleContainer {
+  text-align: center;
+}
+
+.title {
+  display: block;
+  place-self: center;
+  grid-column: 3;
+  margin-top: 2rem;
+  grid-row: 1;
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.planImgContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.planImg {
+  width: 300px;
+}
+
+.hintContainer {
+  text-align: center;
+  opacity: 0.8;
+  margin-top: 2.3rem;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.25rem;
+}

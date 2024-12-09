@@ -20,6 +20,21 @@ import ModalDay7 from '../santa-modal/santa-modal-day-7/santa-modal-day-7';
 import ModalDay8 from '../santa-modal/santa-modal-day-8/santa-modal-day-8';
 import ModalDay9 from '../santa-modal/santa-modal-day-9/santa-modal-day-9';
 import ModalDay10 from '../santa-modal/santa-modal-day-10/santa-modal-day-10';
+import ModalDay11 from '../santa-modal/santa-modal-day-11/santa-modal-day-11';
+import ModalDay12 from '../santa-modal/santa-modal-day-12/santa-modal-day-12';
+import ModalDay13 from '../santa-modal/santa-modal-day-13/santa-modal-day-13';
+import ModalDay14 from '../santa-modal/santa-modal-day-13/santa-modal-day-13';
+import ModalDay15 from '../santa-modal/santa-modal-day-14/santa-modal-day-14';
+import ModalDay16 from '../santa-modal/santa-modal-day-15/santa-modal-day-15';
+import ModalDay17 from '../santa-modal/santa-modal-day-17/santa-modal-day-17';
+import ModalDay18 from '../santa-modal/santa-modal-day-18/santa-modal-day-18';
+import ModalDay19 from '../santa-modal/santa-modal-day-19/santa-modal-day-19';
+import ModalDay20 from '../santa-modal/santa-modal-day-20/santa-modal-day-20';
+import ModalDay21 from '../santa-modal/santa-modal-day-21/santa-modal-day-21';
+import ModalDay22 from '../santa-modal/santa-modal-day-22/santa-modal-day-22';
+import ModalDay23 from '../santa-modal/santa-modal-day-23/santa-modal-day-23';
+import ModalDay24 from '../santa-modal/santa-modal-day-24/santa-modal-day-24';
+import ModalDay25 from '../santa-modal/santa-modal-day-25/santa-modal-day-25';
 
 export interface GridProps {
   santaDaysInput: SantaDay[];
@@ -62,7 +77,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={1}
             santaDay={santaDays[0]}
             openSantaDay={openSantaDayAction}
-            headerImg={'/img/bauble-2.png'}
+            headerImg={'/img/modal/1/bauble.png'}
             marginLeftModalHeaderTitle={-10}
             modalContent={<ModalDay1 />}
           />
@@ -106,7 +121,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={2}
             santaDay={santaDays[1]}
             openSantaDay={openSantaDayAction}
-            headerImg={'/img/bauble-3.png'}
+            headerImg={'/img/modal/2/bauble.png'}
             modalContent={<ModalDay2 />}
           />
           <PicCard
@@ -130,7 +145,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={3}
             santaDay={santaDays[2]}
             openSantaDay={openSantaDayAction}
-            headerImg={'/img/bauble-6.png'}
+            headerImg={'/img/modal/3/bauble.png'}
             modalContent={<ModalDay3 />}
           />
           <PicCard
@@ -162,7 +177,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={4}
             santaDay={santaDays[3]}
             openSantaDay={openSantaDayAction}
-            headerImg={'/img/bauble-8.png'}
+            headerImg={'/img/modal/4/bauble.png'}
             modalContent={<ModalDay4 />}
           />
           <ImageCard
@@ -192,7 +207,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={5}
             santaDay={santaDays[4]}
             openSantaDayAction={openSantaDayAction}
-            headerImg={'/img/bauble-10.png'}
+            headerImg={'/img/modal/5/bauble.png'}
             modalContent={<ModalDay5 />}
           />
           <PicCard
@@ -228,7 +243,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             rotateDirection={'left'}
             santaDay={santaDays[5]}
             openSantaDay={openSantaDayAction}
-            headerImg={'/img/bauble-11.png'}
+            headerImg={'/img/modal/6/bauble.png'}
             modalContent={<ModalDay6 />}
           />
           <PicCard
@@ -252,7 +267,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={7}
             santaDay={santaDays[6]}
             openSantaDay={openSantaDayAction}
-            headerImg={'/img/bauble-12.png'}
+            headerImg={'/img/modal/7/bauble.png'}
             modalContent={<ModalDay7 />}
           />
           <PicCard
@@ -284,7 +299,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={8}
             santaDay={santaDays[7]}
             openSantaDay={openSantaDayAction}
-            headerImg={'/img/bauble-5.png'}
+            headerImg={'/img/modal/8/bauble.png'}
             modalContent={<ModalDay8 />}
           />
           <PicCard
@@ -318,7 +333,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={9}
             santaDay={santaDays[8]}
             openSantaDay={openSantaDayAction}
-            headerImg={'/img/bauble-7.png'}
+            headerImg={'/img/modal/9/bauble.png'}
             modalContent={<ModalDay9 />}
           />
           <PicCard
@@ -349,7 +364,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={10}
             santaDay={santaDays[9]}
             openSantaDayAction={openSantaDayAction}
-            headerImg={'/img/bauble-10.png'}
+            headerImg={'/img/modal/10/bauble.png'}
             modalContent={<ModalDay10 />}
           />
           <PicCard
@@ -370,6 +385,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={11}
             santaDay={santaDays[10]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay11 />}
           />
           <PicCard
             y={110}
@@ -401,6 +417,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={12}
             santaDay={santaDays[11]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay12 />}
           />
           <SmallDayCard
             y={130}
@@ -409,6 +426,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={13}
             santaDay={santaDays[12]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay13 />}
           />
           <PicCard
             y={130}
@@ -439,6 +457,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={14}
             santaDay={santaDays[13]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay14 />}
           />
           <PicCard
             y={140}
@@ -469,6 +488,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={15}
             santaDay={santaDays[14]}
             openSantaDayAction={openSantaDayAction}
+            modalContent={<ModalDay15 />}
           />
           <PicCard
             y={151}
@@ -488,6 +508,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={16}
             santaDay={santaDays[15]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay16 />}
           />
           <PicCard
             y={160}
@@ -507,6 +528,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={17}
             santaDay={santaDays[16]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay17 />}
           />
           <PicCard
             y={170}
@@ -539,6 +561,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={18}
             santaDay={santaDays[17]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay18 />}
           />
           <PicCard
             y={190}
@@ -560,6 +583,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={19}
             santaDay={santaDays[18]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay19 />}
           />
           <BigCard
             y={200}
@@ -569,6 +593,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={20}
             santaDay={santaDays[19]}
             openSantaDayAction={openSantaDayAction}
+            modalContent={<ModalDay20 />}
           />
           <PicCard
             y={209}
@@ -600,6 +625,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={21}
             santaDay={santaDays[20]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay21 />}
           />
           <PicCard
             y={211}
@@ -630,6 +656,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={22}
             santaDay={santaDays[21]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay22 />}
           />
           <PicCard
             y={230}
@@ -650,6 +677,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={23}
             santaDay={santaDays[22]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay23 />}
           />
           <PicCard
             y={240}
@@ -670,6 +698,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={24}
             santaDay={santaDays[23]}
             openSantaDay={openSantaDayAction}
+            modalContent={<ModalDay24 />}
           />
           <SantaCard
             y={250}
@@ -679,6 +708,7 @@ export default function Grid({ santaDaysInput }: GridProps) {
             day={25}
             santaDay={santaDays[24]}
             openSantaDayAction={openSantaDayAction}
+            modalContent={<ModalDay25 />}
           />
           <ImageCard
             uri={'/img/secret-santa.png'}
