@@ -5,8 +5,8 @@ export default function ModalDay14() {
     <div className={styles.textContainer}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          Le restaurant Youyou vous offre le dessert de votre choix pour un moment
-          culinaire à partager avec le chef ❤️
+          Le restaurant Youyou vous offre le dessert de votre choix pour un
+          moment culinaire à partager avec le chef ❤️
         </span>
       </div>
       <div className={styles.imgContainer}>
@@ -28,7 +28,8 @@ export default function ModalDay14() {
       <div className={styles.descriptionContainer}>
         <span>
           Attention ! Pour être activé, ce bon devra être présenté à ton Youyou
-          et est valide qu&apos;une seule fois 😉
+          et est valide qu&apos;une seule fois 😉 Et pourquoi pas entrée, plat,
+          dessert ? 👨‍🍳
         </span>
       </div>
     </div>
