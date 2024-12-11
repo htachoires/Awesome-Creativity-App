@@ -11,6 +11,7 @@ export interface SantaCardProps {
   santaDay: SantaDay;
   openSantaDayAction: (santaDay: SantaDay) => void;
   modalContent?: JSX.Element;
+  headerImg?: string;
 }
 
 export function SantaCard({
@@ -23,6 +24,7 @@ export function SantaCard({
   santaDay,
   openSantaDayAction,
   modalContent,
+  headerImg,
 }: SantaCardProps) {
   return (
     <DayCard
@@ -39,6 +41,7 @@ export function SantaCard({
       marginX={marginX}
       color={'var(--quarterly)'}
       borderBackground={'var(--terciary)'}
+      headerImg={headerImg}
       modalContent={modalContent}
       borderRadius={'27% 73% 29% 71% / 72% 26% 74% 28% '}
       fontSize={'5rem'}
