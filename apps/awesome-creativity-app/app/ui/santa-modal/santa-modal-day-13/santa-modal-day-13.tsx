@@ -28,8 +28,8 @@ export default function ModalDay13() {
       <div className={styles.descriptionContainer}>
         <span>
           Attention ! Pour être activé, ce bon devra être présenté à ton Youyou
-          et est valide qu&apos;une seule fois 😉 Offre cumulable avec de
-          potentiel futur bon 🤫
+          et est valide qu&apos;une seule fois 😉 Cette offre est cumulable avec
+          un bon d&apos;entrée 😋
         </span>
       </div>
     </div>
