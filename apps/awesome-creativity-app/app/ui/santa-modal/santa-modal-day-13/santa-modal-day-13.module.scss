@@ -4,31 +4,42 @@
 
 .title {
   display: block;
+  font-size: 1.35rem;
   place-self: center;
   grid-column: 3;
   margin-top: 2rem;
   grid-row: 1;
-  font-size: 1.5rem;
-  opacity: 0.8;
 }
 
-.planImgContainer {
+.imgContainer {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
-.planImg {
+.massageImg {
   width: 300px;
+  border-radius: 10px;
 }
 
-.hintContainer {
+.descriptionContainer {
   text-align: center;
-  opacity: 0.8;
-  margin-top: 2.3rem;
+  margin-top: 1rem;
 }
 
-.description {
+.downloadContainer {
+  margin-top: 1.5rem;
   text-align: center;
-  font-size: 1.25rem;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--font-secondary);
+
+}
+
+.link:link, .link:visited {
+  text-decoration: none;
 }
