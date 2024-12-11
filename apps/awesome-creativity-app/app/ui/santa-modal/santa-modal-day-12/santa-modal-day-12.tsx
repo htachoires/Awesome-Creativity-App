@@ -5,7 +5,7 @@ export default function ModalDay12() {
     <div className={styles.textContainer}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          Le restaurant Youyou vous offre l&apos;entrée de votre choix pour un
+          Le restaurant Youyou vous offre une entrée de votre choix pour un
           moment culinaire à partager avec le chef ❤️
         </span>
       </div>
@@ -28,8 +28,8 @@ export default function ModalDay12() {
       <div className={styles.descriptionContainer}>
         <span>
           Attention ! Pour être activé, ce bon devra être présenté à ton Youyou
-          et est valide qu&apos;une seule fois 😉 Offre cumulable avec de
-          potentiel futur bon 🤫
+          et est valide qu&apos;un seul repas 😉 Offre cumulable avec de
+          potentiels futurs bons 🤫
         </span>
       </div>
     </div>
