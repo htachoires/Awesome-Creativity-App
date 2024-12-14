@@ -5,19 +5,19 @@ export default function ModalDay15() {
     <div className={styles.textContainer}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          Pendant leur fuite, un lutin pirate a laissé tomber un autre cadeau
+          Quelqu&apos;ils s&apos;entendent bien tous les deux 🥰
         </span>
       </div>
-      <div className={styles.planImgContainer}>
+      <div className={styles.imgContainer}>
         <img
-          className={styles.planImg}
-          src="/img/modal/9/plan-shadow.png"
-          alt="gift"
+          className={styles.massageImg}
+          src="/img/modal/15/hide.jpeg"
+          alt="massage"
         />
       </div>
-      <div className={styles.hintContainer}>
-        <span className={styles.description}>
-          💎 Arriveras-tu à trouver le trouver ? 💎
+      <div className={styles.descriptionContainer}>
+        <span>
+          Ils ont air de cacher quelque chose !<br /> Non ? 🎁
         </span>
       </div>
     </div>
