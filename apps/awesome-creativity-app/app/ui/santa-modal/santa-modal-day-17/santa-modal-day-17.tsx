@@ -5,19 +5,20 @@ export default function ModalDay17() {
     <div className={styles.textContainer}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          Pendant leur fuite, un lutin pirate a laissé tomber un autre cadeau
+          Ton youyou se repose avec son amoureuse (Mon chat à moi), il
+          sera de retour dès de demain pour de nouvelles aventures 🥰
         </span>
       </div>
       <div className={styles.planImgContainer}>
         <img
           className={styles.planImg}
-          src="/img/modal/9/plan-shadow.png"
+          src="/img/modal/17/us.jpg"
           alt="gift"
         />
       </div>
       <div className={styles.hintContainer}>
         <span className={styles.description}>
-          💎 Arriveras-tu à trouver le trouver ? 💎
+          À demain mon amour, je t'aime ❤️
         </span>
       </div>
     </div>
