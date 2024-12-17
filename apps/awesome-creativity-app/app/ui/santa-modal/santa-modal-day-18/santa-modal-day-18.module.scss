@@ -1,34 +1,67 @@
-.titleContainer {
-  text-align: center;
-}
-
 .title {
   display: block;
+  font-size: 1.35rem;
   place-self: center;
   grid-column: 3;
-  margin-top: 2rem;
+  margin-top: 1rem;
   grid-row: 1;
-  font-size: 1.5rem;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
-.planImgContainer {
+.logoContainer {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
 }
 
-.planImg {
-  width: 300px;
+.logoImg {
+  border-radius: 10px;
+  width: 250px;
 }
 
-.hintContainer {
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.gridImgContainer {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 0.5rem;
+  row-gap: 1rem;
+}
+
+.restaurantImg, .gridImg {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.restaurantImg {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.descriptionContainer {
   text-align: center;
-  opacity: 0.8;
-  margin-top: 2.3rem;
+  margin-top: 1rem;
 }
 
-.description {
+.downloadContainer {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
-  font-size: 1.25rem;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--font-secondary);
+
+}
+
+.link:link, .link:visited {
+  text-decoration: none;
 }
