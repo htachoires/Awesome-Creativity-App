@@ -5,8 +5,8 @@ export default function ModalDay19() {
     <div className={styles.textContainer}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          Bon pour une séance de cinéma de ton choix avec ton Youyou 🎬 Tu reconnais
-          la photo de cet été ? 🥰
+          Bon pour une séance de cinéma de ton choix avec ton Youyou 🎬 Tu
+          reconnais la photo de cet été ? 🥰
         </span>
       </div>
       <div className={styles.imgContainer}>
