@@ -1,34 +1,57 @@
 .titleContainer {
-  text-align: center;
 }
 
 .title {
   display: block;
+  font-size: 1.3rem;
+  text-align: justify;
   place-self: center;
   grid-column: 3;
   margin-top: 2rem;
   grid-row: 1;
-  font-size: 1.5rem;
-  opacity: 0.8;
 }
 
-.planImgContainer {
+.imgContainer {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
-.planImg {
-  width: 300px;
+.massageImg {
+  width: 150px;
 }
 
-.hintContainer {
-  text-align: center;
-  opacity: 0.8;
-  margin-top: 2.3rem;
-}
-
-.description {
-  text-align: center;
+.descriptionContainer {
+  margin-top: 3rem;
+  text-align: justify;
   font-size: 1.25rem;
+}
+
+.imgBottomContainer {
+  margin-top: 1rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.lightLeft, .lightRight {
+  width: 40px;
+  justify-self: center;
+}
+
+.lightLeft {
+  grid-column-start: 1;
+  rotate: -60deg;
+}
+
+.lightRight {
+  grid-column-start: 3;
+  rotate: 60deg;
+}
+
+.letter {
+  grid-column-start: 2;
+  font-size: 4rem;
+  text-align: center;
+  align-self: center;
 }
