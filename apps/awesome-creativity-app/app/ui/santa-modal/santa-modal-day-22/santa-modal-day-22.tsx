@@ -29,8 +29,9 @@ export default function ModalDay22() {
     <div className={styles.textContainer}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          Que dirais-tu d&apos;un tour en Amérique du sud pour prendre un bon
-          bain d&apos;énergie ? ⚡
+          La savane, le desert, un safari ? Au tour de l&apos;Afrique de te
+          faire voyager lors de tes futures soirées sur ton canapé devant la
+          télé 🦓
         </span>
       </div>
       <motion.div
@@ -40,15 +41,18 @@ export default function ModalDay22() {
       >
         <img
           className={styles.massageImg}
-          src="/img/modal/22/gift.png"
+          src="/img/modal/23/gift.png"
           alt="cinema"
         />
       </motion.div>
       <div className={styles.descriptionContainer}>
         <span>
-          Tu peux te diriger vers la lettre correspondante pour découvrir ton
-          prochain voyage ☀️
+          Tu peux maintenant te diriger vers les lettres correspondantes pour
+          découvrir ce que l&apos;Afrique a à t&apos;offrir 🐘
         </span>
+      </div>
+      <div className={styles.signContainer}>
+        <span>Ton Youyou qui t&apos;aime ❤️</span>
       </div>
       <div className={styles.imgBottomContainer}>
         <img
@@ -62,7 +66,7 @@ export default function ModalDay22() {
           variants={letterVariants}
           className={styles.letter}
         >
-          B
+          S·A
         </motion.span>
         <img
           className={styles.lightRight}
