@@ -29,9 +29,8 @@ export default function ModalDay22() {
     <div className={styles.textContainer}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          Dans différentes régions du monde existent des pratiques ancestrales
-          détoxifiantes utilisant des ingrédients connus pour purifier le corps
-          🌍
+          Que dirais-tu d&apos;un tour en Amérique du sud pour prendre un bon
+          bain d&apos;énergie ? ⚡
         </span>
       </div>
       <motion.div
@@ -47,8 +46,8 @@ export default function ModalDay22() {
       </motion.div>
       <div className={styles.descriptionContainer}>
         <span>
-          As-tu deviné ce qui se cache derrière ? À toi d&apos;aller ouvrir ton
-          cadeau pour le découvrir 🎁
+          Tu peux te diriger vers la lettre correspondante pour découvrir ton
+          prochain voyage ☀️
         </span>
       </div>
       <div className={styles.imgBottomContainer}>
@@ -59,7 +58,7 @@ export default function ModalDay22() {
         />
         <motion.span
           animate={'move'}
-          initial={{opacity: 0, scale: 0, y:50}}
+          initial={{ opacity: 0, scale: 0, y: 50 }}
           variants={letterVariants}
           className={styles.letter}
         >
