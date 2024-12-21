@@ -59,7 +59,7 @@ export default function ModalDay24() {
         />
         <motion.span
           animate={'move'}
-          initial={{opacity: 0, scale: 0, y:50}}
+          initial={{ opacity: 0, scale: 0, y: 50 }}
           variants={letterVariants}
           className={styles.letter}
         >
