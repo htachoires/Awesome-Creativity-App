@@ -40,7 +40,7 @@ export default function ModalDay23() {
       >
         <img
           className={styles.massageImg}
-          src="/img/modal/22/gift.png"
+          src="/img/modal/23/gift.png"
           alt="cinema"
         />
       </motion.div>
