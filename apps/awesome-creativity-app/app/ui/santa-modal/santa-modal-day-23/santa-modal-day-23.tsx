@@ -52,6 +52,9 @@ export default function ModalDay23() {
           tranquille !
         </span>
       </div>
+      <div className={styles.psContainer}>
+        <span>PS: J-2 avant Noël 🤫🎁</span>
+      </div>
       <div className={styles.imgBottomContainer}>
         <img
           className={styles.lightLeft}

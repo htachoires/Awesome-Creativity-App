@@ -47,8 +47,8 @@ export default function ModalDay24() {
           lettres pour y découvrir ce que l&apos;Afrique a à t&apos;offrir 🐘
         </span>
       </div>
-      <div className={styles.signContainer}>
-        <span>Ton Youyou qui t&apos;aime ❤️</span>
+      <div className={styles.psContainer}>
+        <span>PS: J-1 avant Noël 🤫🎁</span>
       </div>
       <div className={styles.imgBottomContainer}>
         <img
