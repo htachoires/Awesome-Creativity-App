@@ -2,17 +2,6 @@ import styles from './santa-modal-day-24.module.scss';
 import { motion, Variants } from 'framer-motion';
 
 export default function ModalDay24() {
-  const variant: Variants = {
-    move: {
-      y: [3, 0, 3],
-      transition: {
-        duration: 1, // Total time for one cycle (up and down)
-        repeat: Infinity, // Keep repeating
-        ease: 'easeInOut', // Smooth transitions
-      },
-    },
-  };
-
   const letterVariants: Variants = {
     move: {
       opacity: 1,
@@ -29,27 +18,37 @@ export default function ModalDay24() {
     <div className={styles.textContainer}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          Dans différentes régions du monde existent des pratiques ancestrales
-          détoxifiantes utilisant des ingrédients connus pour purifier le corps
-          🌍
+          La savane, le desert, les montagnes du Cederberg ? Au tour de
+          l&apos;Afrique de te faire voyager lors de tes futures soirées sur ton
+          canapé devant la télé 🦓
         </span>
+        <div className={styles.gridImgContainer}>
+          <img
+            className={styles.mainImg}
+            src="/img/modal/24/first.jpg"
+            alt="Iguazu Falls"
+          />
+          <img
+            className={styles.gridImg}
+            src="/img/modal/24/second.jpg"
+            alt="Machu Picchu"
+          />
+          <img
+            className={styles.gridImg}
+            src="/img/modal/24/third.jpg"
+            alt="Christ Rédempteur"
+          />
+        </div>
       </div>
-      <motion.div
-        animate={'move'}
-        variants={variant}
-        className={styles.imgContainer}
-      >
-        <img
-          className={styles.massageImg}
-          src="/img/modal/22/gift.png"
-          alt="cinema"
-        />
-      </motion.div>
       <div className={styles.descriptionContainer}>
         <span>
-          As-tu deviné ce qui se cache derrière ? À toi d&apos;aller ouvrir ton
-          cadeau pour le découvrir 🎁
+          Que ce thé t&apos;apporte réconfort et soin lorsque tu en aura besoin
+          😇 À toi maintenant te diriger vers le cadeau correspondant aux deux
+          lettres pour y découvrir ce que l&apos;Afrique a à t&apos;offrir 🐘
         </span>
+      </div>
+      <div className={styles.signContainer}>
+        <span>Ton Youyou qui t&apos;aime ❤️</span>
       </div>
       <div className={styles.imgBottomContainer}>
         <img
@@ -63,7 +62,7 @@ export default function ModalDay24() {
           variants={letterVariants}
           className={styles.letter}
         >
-          S
+          S·A
         </motion.span>
         <img
           className={styles.lightRight}

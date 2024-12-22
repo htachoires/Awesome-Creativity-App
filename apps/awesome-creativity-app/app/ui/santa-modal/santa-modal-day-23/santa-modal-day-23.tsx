@@ -18,38 +18,39 @@ export default function ModalDay23() {
     <div className={styles.textContainer}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          La savane, le desert, les montagnes du Cederberg ? Au tour de
-          l&apos;Afrique de te faire voyager lors de tes futures soirées sur ton
-          canapé devant la télé 🦓
+          Malgré un climat un peu plus frais, la Norvège, la Suède, la Finlande
+          ou encore le Danemark seront t&apos;apporter défenses immunitaires
+          pour te protéger des maladies environnantes en hiver ❄️
         </span>
         <div className={styles.gridImgContainer}>
           <img
-            className={styles.mainImg}
+            className={styles.gridImg}
             src="/img/modal/23/first.jpg"
-            alt="Iguazu Falls"
+            alt="Norvege"
           />
           <img
             className={styles.gridImg}
             src="/img/modal/23/second.jpg"
-            alt="Machu Picchu"
+            alt="Suede"
           />
           <img
             className={styles.gridImg}
             src="/img/modal/23/third.jpg"
-            alt="Christ Rédempteur"
+            alt="finlande"
+          />
+          <img
+            className={styles.gridImg}
+            src="/img/modal/23/forth.jpg"
+            alt="Danemark"
           />
         </div>
       </div>
       <div className={styles.descriptionContainer}>
         <span>
-          Que ce thé t&apos;apporte réconfort et soin lorsque tu sera en mode
-          microbe ambulant 😇 À toi maintenant te diriger vers le cadeau
-          correspondant aux deux lettres pour y découvrir ce que l&apos;Afrique
-          a à t&apos;offrir 🐘
+          À ton tour d&apos;ouvrir le cadeau ayant la lettre correspondante pour
+          chasser le microbe ambulant qui est en toi 🦠 Houste, laissez mon chat
+          tranquille !
         </span>
-      </div>
-      <div className={styles.signContainer}>
-        <span>Ton Youyou qui t&apos;aime ❤️</span>
       </div>
       <div className={styles.imgBottomContainer}>
         <img
@@ -63,7 +64,7 @@ export default function ModalDay23() {
           variants={letterVariants}
           className={styles.letter}
         >
-          S·A
+          S
         </motion.span>
         <img
           className={styles.lightRight}

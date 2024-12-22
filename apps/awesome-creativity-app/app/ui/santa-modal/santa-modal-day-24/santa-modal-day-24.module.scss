@@ -1,20 +1,17 @@
-.titleContainer {
-}
-
 .title {
   display: block;
   font-size: 1.3rem;
   text-align: justify;
   place-self: center;
   grid-column: 3;
-  margin-top: 2rem;
+  margin-top: 1rem;
   grid-row: 1;
 }
 
 .imgContainer {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .massageImg {
@@ -22,13 +19,18 @@
 }
 
 .descriptionContainer {
-  margin-top: 3rem;
+  margin-top: 1rem;
   text-align: justify;
   font-size: 1.25rem;
 }
 
-.imgBottomContainer {
+.signContainer {
   margin-top: 1rem;
+  text-align: right;
+}
+
+.imgBottomContainer {
+  margin-top: 0.5rem;
   overflow: hidden;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -51,7 +53,30 @@
 
 .letter {
   grid-column-start: 2;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   align-self: center;
+}
+
+.gridImgContainer {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.mainImg {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.gridItemImgContainer, .mainImgContainer {
+  display: grid;
+}
+
+.mainImg, .gridImg {
+  width: 100%;
+  border-radius: 10px;
+  margin: 0;
 }
