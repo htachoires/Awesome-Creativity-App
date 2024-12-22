@@ -2,17 +2,6 @@ import styles from './santa-modal-day-23.module.scss';
 import { motion, Variants } from 'framer-motion';
 
 export default function ModalDay23() {
-  const variant: Variants = {
-    move: {
-      y: [3, 0, 3],
-      transition: {
-        duration: 1, // Total time for one cycle (up and down)
-        repeat: Infinity, // Keep repeating
-        ease: 'easeInOut', // Smooth transitions
-      },
-    },
-  };
-
   const letterVariants: Variants = {
     move: {
       opacity: 1,
@@ -29,26 +18,34 @@ export default function ModalDay23() {
     <div className={styles.textContainer}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>
-          La savane, le desert, un safari ? Au tour de l&apos;Afrique de te
-          faire voyager lors de tes futures soirées sur ton canapé devant la
-          télé 🦓
+          La savane, le desert, les montagnes du Cederberg ? Au tour de
+          l&apos;Afrique de te faire voyager lors de tes futures soirées sur ton
+          canapé devant la télé 🦓
         </span>
+        <div className={styles.gridImgContainer}>
+          <img
+            className={styles.mainImg}
+            src="/img/modal/23/first.jpg"
+            alt="Iguazu Falls"
+          />
+          <img
+            className={styles.gridImg}
+            src="/img/modal/23/second.jpg"
+            alt="Machu Picchu"
+          />
+          <img
+            className={styles.gridImg}
+            src="/img/modal/23/third.jpg"
+            alt="Christ Rédempteur"
+          />
+        </div>
       </div>
-      <motion.div
-        animate={'move'}
-        variants={variant}
-        className={styles.imgContainer}
-      >
-        <img
-          className={styles.massageImg}
-          src="/img/modal/22/gift.png"
-          alt="cinema"
-        />
-      </motion.div>
       <div className={styles.descriptionContainer}>
         <span>
-          Tu peux maintenant te diriger vers les lettres correspondantes pour
-          découvrir ce que l&apos;Afrique a à t&apos;offrir 🐘
+          Que ce thé t&apos;apporte réconfort et soin lorsque tu sera en mode
+          microbe ambulant 😇 À toi maintenant te diriger vers le cadeau
+          correspondant aux deux lettres pour y découvrir ce que l&apos;Afrique
+          a à t&apos;offrir 🐘
         </span>
       </div>
       <div className={styles.signContainer}>
