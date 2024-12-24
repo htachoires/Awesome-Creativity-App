@@ -18,9 +18,9 @@ export default function ModalDay24() {
         laisse place à de nouvelles aventures à vivre tous les deux en 2025.
       </p>
       <p className={styles.paragraph}>
-        Tout ce qu&apos;il nous reste à faire pour que nous y sautions, c'est
-        que tu viennes y découvrir ce que renferme ce papier cadeau rouge avec
-        ton nom inscrit dessus 🎁
+        Tout ce qu&apos;il nous reste à faire pour que nous y sautions,
+        c&apos;est que tu viennes y découvrir ce que renferme ce papier cadeau
+        rouge avec ton nom inscrit dessus 🎁
       </p>
       <div className={styles.gridImgContainer}>
         <img
