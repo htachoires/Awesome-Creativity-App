@@ -1,8 +1,9 @@
 .container {
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
 
-  .firstParagraph {
-    font-size: 1.3rem;
+  .paragraph {
+    margin-top: 0.9rem;
   }
 
   .gridImgContainer {
@@ -24,12 +25,16 @@
     }
   }
 
-  .secondParagraph {
-    margin-top: 1rem;
-  }
-
   .merryChristmas {
     margin-top: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+    opacity: 0.9;
+  }
+
+  .sign {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
     text-align: end;
   }
 }
