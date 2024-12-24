@@ -1,3 +1,35 @@
-.textContainer {
+.container {
   margin-top: 1rem;
+
+  .firstParagraph {
+    font-size: 1.3rem;
+  }
+
+  .gridImgContainer {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 1rem;
+    row-gap: 1rem;
+
+    .mainImg {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    .mainImg, .gridImg {
+      width: 100%;
+      border-radius: 10px;
+      margin: 0;
+    }
+  }
+
+  .secondParagraph {
+    margin-top: 1rem;
+  }
+
+  .merryChristmas {
+    margin-top: 1rem;
+    text-align: end;
+  }
 }
